@@ -1,10 +1,9 @@
 .hero {
-  background-color: getColor('bg-clr2');
-  width: 100%;
-  height: 100%;
-  background-image: url('/src/images/header-hero_png/ice-scream1x_320.png');
+  background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
+    url('/src/images/header-hero_png/eclipse/Ellipse\ 320.png');
   background-repeat: no-repeat;
-  background-size: 100wv;
+  background-position: bottom right $dist32, bottom 75px right;
+  background-color: getColor('bg-clr2');
 }
 
 .hero__container {
@@ -13,19 +12,39 @@
 }
 
 .hero__header {
-  @include font-size(26px, 400, 1.153, 0.04em);
+  width: 218px;
   font-family: $font-main;
+  @include font-size(26px, 400, 1.153, 0.04em);
   text-transform: uppercase;
   color: white;
-  width: 218px;
 }
 
 .hero__header > .hero__header--accent {
   font-size: 48px;
-  color: getColor('main-clr');
   line-height: calc(46 / 48);
+
+  color: getColor('main-clr');
 }
 
-// .hero__a {
-//   color: inherit;
-// }
+.hero__list {
+  display: flex;
+  gap: 8px;
+}
+
+.hero__item .hero__link {
+  display: block;
+  padding: 7px 12px;
+
+  font-family: $font-sec;
+  font-size: 8px;
+  line-height: 10px;
+
+  background-color: getColor('main-clr');
+  color: white;
+  border-radius: 20px;
+}
+
+.hero__list .hero__item:last-child .hero__link {
+  background-color: white;
+  color: getColor('main-clr');
+}
