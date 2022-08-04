@@ -47,31 +47,4 @@ body {
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  color: #000000;
 }/*# sourceMappingURL=index.css.map */
