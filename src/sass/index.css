@@ -103,4 +103,16 @@ body {
 .hero__list .hero__item:last-child .hero__link {
   background-color: white;
   color: #d41443;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: repeat 6, 1fr;
+  grid-auto-flow: row;
+}
+
+.images__item > .images__item--big {
+  grid-column: span 2;
+  grid-row: span 2;
 }/*# sourceMappingURL=index.css.map */
