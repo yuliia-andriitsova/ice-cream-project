@@ -1,7 +1,8 @@
 @import './common';
 @import './base/base';
 @import './base/helpers';
-@import './base/base.scss';
+@import './utils/mixins';
+@import './utils/variables';
 @import './partials/header';
 @import './partials/hero';
 @import './partials/products';
