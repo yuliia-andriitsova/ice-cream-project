@@ -1,0 +1,32 @@
+$font-main: 'Titan One', sans-serif;
+$font-sec: 'DM Sans', sans-serif;
+
+$colors: (
+  'main-clr': #d41443,
+  'font-clr1': #907e82,
+  'font-clr2': #ffffff,
+  'bg-clr1': #e17992,
+  'bg-clr2': #ffb8ca,
+  'bg-clr3': #ffa5ba,
+  'bg-clr4': #f0d1a5,
+  'bg-clr5': #c2e297,
+  'bg-clr6': #fff5f6,
+  'bg-clr7': #fafafa,
+  'bg-clr8': #f0d1a5,
+  'bg-clr9': #fea5bb,
+  'acc-clr1': #e18298,
+  'acc-clr2': #e1e1e1,
+  'acc-clr3': #d9d9d9,
+  'acc-clr4': #d31342,
+  'acc-clr5': #d41342,
+);
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}
+
+$dist16: 16px;
+$dist20: 20px;
+$dist32: 32px;
+$dist40: 40px;
+$dist60: 60px;
