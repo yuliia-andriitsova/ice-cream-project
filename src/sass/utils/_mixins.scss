@@ -6,7 +6,7 @@
 
 @mixin font-size(
   $font-size,
-  $font-weight,
+  $font-weight: 400,
   $line-height: normal,
   $letter-spacing: normal
 ) {
