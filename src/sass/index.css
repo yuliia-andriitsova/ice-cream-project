@@ -50,17 +50,16 @@ body {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .container {
-    width: 100%;
+    min-width: 320px;
+    max-width: 480px;
   }
 }
 
 .hero {
-  background-color: #ffb8ca;
-  width: 100%;
-  height: 100%;
-  background-image: url("/src/images/header-hero_png/ice-scream1x_320.png");
+  background-image: url("/src/images/header-hero_png/ice-scream1x_320.png"), url("/src/images/header-hero_png/eclipse/Ellipse 320.png");
   background-repeat: no-repeat;
-  background-size: 100wv;
+  background-position: bottom right 32px, bottom 75px right;
+  background-color: #ffb8ca;
 }
 
 .hero__container {
@@ -69,18 +68,39 @@ body {
 }
 
 .hero__header {
+  width: 218px;
+  font-family: "Titan One", sans-serif;
   font-size: 26px;
   font-weight: 400;
   line-height: 1.153;
   letter-spacing: 0.04em;
-  font-family: "Titan One", sans-serif;
   text-transform: uppercase;
   color: white;
-  width: 218px;
 }
 
 .hero__header > .hero__header--accent {
   font-size: 48px;
-  color: #d41443;
   line-height: 0.9583333333;
+  color: #d41443;
+}
+
+.hero__list {
+  display: flex;
+  gap: 8px;
+}
+
+.hero__item .hero__link {
+  display: block;
+  padding: 7px 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  line-height: 10px;
+  background-color: #d41443;
+  color: white;
+  border-radius: 20px;
+}
+
+.hero__list .hero__item:last-child .hero__link {
+  background-color: white;
+  color: #d41443;
 }/*# sourceMappingURL=index.css.map */
