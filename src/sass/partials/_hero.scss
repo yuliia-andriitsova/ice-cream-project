@@ -1,0 +1,31 @@
+.hero {
+  background-color: getColor('bg-clr2');
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/images/header-hero_png/ice-scream1x_320.png');
+  background-repeat: no-repeat;
+  background-size: 100wv;
+}
+
+.hero__container {
+  padding-top: 194px;
+  padding-bottom: 158px;
+}
+
+.hero__header {
+  @include font-size(26px, 400, 1.153, 0.04em);
+  font-family: $font-main;
+  text-transform: uppercase;
+  color: white;
+  width: 218px;
+}
+
+.hero__header > .hero__header--accent {
+  font-size: 48px;
+  color: getColor('main-clr');
+  line-height: calc(46 / 48);
+}
+
+.hero__a {
+  color: white;
+}
