@@ -1,0 +1,58 @@
+.howitsmade {
+  padding-top: $dist60;
+  padding-bottom: $dist60;
+  background-color: getColor('bg-clr6');
+  background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
+  background-repeat: no-repeat;
+  background-position: bottom 594px;
+}
+
+.howitsmade_background {
+  margin-bottom: 549px;
+  z-index: 9;
+}
+
+.howitsmade__pretitle {
+  @include pre-title;
+  font-family: titan one, titan one;
+  margin-bottom: 15px;
+  color: getColor('bg-clr3');
+  text-align: center;
+}
+
+.howitsmade__title {
+  @include title;
+  margin-bottom: 32px;
+  font-family: titan one, titan one;
+  color: getColor('main-clr');
+  text-align: center;
+}
+
+.howitsmade__text--medium {
+  @include font-size(12, 500, 1.62, null);
+  color: inherit;
+  padding-right: 60px;
+  margin-bottom: 40px;
+}
+
+.howitsmade__text--slim {
+  @include font-size(12, 500, 1.62, null);
+  color: getColor('font-clr1');
+  padding-right: 60px;
+}
+
+.howitsmade__items:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.howitsmade__components--quantity {
+  font-family: titan one, titan one;
+  @include font-size(36, 400, 1.14, 0.04em);
+  color: getColor('main-clr');
+  text-transform: uppercase;
+}
+
+.howitsmade__text--bold {
+  @include font-size(12, 700, 1.7, null);
+  padding-right: 50px;
+}
