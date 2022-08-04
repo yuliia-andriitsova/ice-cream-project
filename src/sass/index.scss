@@ -1,2 +1,10 @@
 @import './common';
-@import './example';
+@import './base/base.scss';
+@import './partials/header';
+@import './partials/hero';
+@import './partials/products';
+@import './partials/howitsmade';
+@import './partials/gallery';
+@import './partials/locations';
+@import './partials/footer';
+@import './partials/modal';
