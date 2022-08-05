@@ -54,6 +54,7 @@
 
 @mixin button-white($side-padding) {
   display: block;
+  position: relative;
   padding: 11px $side-padding;
   width: fit-content;
 
@@ -68,8 +69,39 @@
   border-radius: 20px;
   text-align: center;
 
-  &::after {
-    content: '';
-    background-image: url(/src/images/arrow-red.jpg);
+  cursor: pointer;
+  transition: all 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: getColor('main-clr');
+  }
+}
+
+@mixin button-red($side-padding) {
+  display: block;
+  position: relative;
+  padding: 11px $side-padding;
+  width: fit-content;
+
+  font-family: $font-sec;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+
+  background-color: getColor('main-clr');
+  color: white;
+
+  border-radius: 20px;
+  text-align: center;
+
+  cursor: pointer;
+  transition: all 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: getColor('main-clr');
+    background-color: white;
   }
 }
