@@ -4,7 +4,8 @@
   background-color: getColor('bg-clr6');
   background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
   background-repeat: no-repeat;
-  background-position: bottom 594px;
+  background-position: top 574px right 1px;
+  width: 100%;
 }
 
 .howitsmade_background {
@@ -34,6 +35,14 @@
   padding-right: 60px;
   margin-bottom: 40px;
 }
+
+// .howitsmade__text--slim::before {
+//   content: '';
+//   background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
+//   background-repeat: no-repeat;
+//   background-position: bottom 594px;
+//   z-index: 2;
+// }
 
 .howitsmade__text--slim {
   @include font-size(12, 500, 1.62, null);
