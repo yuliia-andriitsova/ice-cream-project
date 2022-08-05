@@ -25,12 +25,11 @@ text-transform: uppercase;
 color: #D41443;
 }
 .products__item{
-margin-top: 140px;
-
+margin: auto;
 }
 .products__list{
- position: fixed;               
 position: relative;
+margin-top: 140px;
 width: 100%;              
 max-width: 480px;
 height: 489px;
@@ -45,10 +44,14 @@ background-color:#FFB8CA ;
 }
 .products__list--backgreen{
 background-color:#C2E297;}
-.products__icecream{
-position: absolute;
+.products__picture{
+position: absolute;              
+margin-left: auto;
+margin-right: auto;
 top: -140px;
-width: 100%;
-// transform: translateY(-50%);
-// transform: translateX(-50%);
+left: 0;
+right: 0;
 }
+
+
+
