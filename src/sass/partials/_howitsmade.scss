@@ -1,0 +1,78 @@
+.howitsmade {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding-top: $dist60;
+    padding-bottom: $dist60;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 64px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 120px;
+  }
+
+  background-color: getColor('bg-clr6');
+  background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
+  background-repeat: no-repeat;
+  background-position: top 574px right 1px;
+  width: 100%;
+}
+
+.howitsmade_background {
+  margin-bottom: 549px;
+  z-index: 9;
+}
+
+.howitsmade__pretitle {
+  @include pre-title;
+  font-family: titan one, titan one;
+  margin-bottom: 15px;
+  color: getColor('bg-clr3');
+  text-align: center;
+}
+
+.howitsmade__title {
+  @include title;
+  margin-bottom: 32px;
+  font-family: titan one, titan one;
+  color: getColor('main-clr');
+  text-align: center;
+}
+
+.howitsmade__text--medium {
+  @include font-size(12, 500, 1.62, null);
+  color: inherit;
+  padding-right: 60px;
+  margin-bottom: 40px;
+}
+
+// .howitsmade__text--slim::before {
+//   content: '';
+//   background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
+//   background-repeat: no-repeat;
+//   background-position: bottom 594px;
+//   z-index: 2;
+// }
+
+.howitsmade__text--slim {
+  @include font-size(12, 500, 1.62, null);
+  color: getColor('font-clr1');
+  padding-right: 60px;
+}
+
+.howitsmade__items:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.howitsmade__components--quantity {
+  font-family: titan one, titan one;
+  @include font-size(36, 400, 1.14, 0.04em);
+  color: getColor('main-clr');
+  text-transform: uppercase;
+}
+
+.howitsmade__text--bold {
+  @include font-size(12, 700, 1.7, null);
+  padding-right: 50px;
+}
