@@ -1,6 +1,8 @@
 .products{
-width: 100%;              
-background-color: #E5E5E5;              
+width: 100%;
+margin-top: 60px;
+margin-bottom: 60px;
+background-color: #FFFFFF;              
 }
 .products__pre-title{
  display: block;               
@@ -37,6 +39,7 @@ height: 489px;
 border:transparent;
 border-radius: 24px;
 }
+
 .products__list--backping{
 background-color:#FFB8CA ;
 }
@@ -87,13 +90,13 @@ letter-spacing: 0.04em;
 color: #FFFFFF;
 }
 .products__button{
- border: transparent;
- border-radius: 50%;               
+
+margin-top: 32px;
+border:transparent; 
+border-radius: 50%;            
 }
-.products_svg{
-margin: 0;
-padding: 0;                
-}
+
+
 
 
 
