@@ -1,0 +1,104 @@
+.locations {
+    background-image: linear-gradient(
+        to bottom,
+        #ffffff 17%,
+        #FFF5F6 17%,
+        #FFF5F6 75% );
+}
+
+
+.locations__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.locations__item {
+    padding: 40px 32px;
+    background: getColor('font-clr2');
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+}
+
+.locations__item-about {
+    margin-bottom: 24px;
+}
+
+.locations__item-shedule {
+    margin-bottom: 24px;
+}
+
+.shedule:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.item__about-name {
+    width: 80px;
+@include font-size(12, 500, 1.5, 0.04em);
+font-family: $font-sec;
+color: getColor('font-clr2');
+text-align: center;
+background-color: getColor('bg-clr4');
+border-radius: 6px;
+margin-bottom: 20px;
+&.span {
+    background-color: getColor('bg-clr5');
+    width: 130px;
+}
+}
+
+.item__about-place {
+@include font-size(12, 500, 1.5, 0.04em);
+font-family: $font-sec;
+color: inherit;
+margin-bottom: 8px;
+}
+
+.item__about-discription {
+@include font-size(12, 500, 1.5, 0.04em);
+font-family: $font-sec;
+color: getColor('font-clr1');
+}
+
+.locations__item-shedule {
+    margin-bottom: 48px;
+    &::before {
+        content: "";
+        margin-bottom: 24px;
+        display: block;
+        width: 100%;
+        border: 1px solid #E1E1E1;
+    }
+}
+
+.item__shedule-day {
+@include font-size(12, 500, 1.5, null);
+font-family: $font-sec;
+color: inherit;
+}
+
+.item__shedule-time {
+@include font-size(12, 500, 1.5, 0.04em);
+font-family: $font-sec;
+color: getColor('bg-clr3');
+}
+
+.locations__item-contacts {
+    &::before {
+        content: "";
+        margin-bottom: 24px;
+        display: block;
+        width: 100%;
+        border: 1px solid #E1E1E1;
+    }
+}
+
+.item__contacts-link {
+    @include font-size(12, 500, 1.5, 0.04em);
+font-family: $font-sec;
+color: getColor('font-clr1');
+}
+
+.locations-buttons {
+    
+}
