@@ -2,10 +2,13 @@
   background-color: getColor('bg-clr2');
   display: flex;
 }
-.container {
-  margin-left: 0;
-  margin-right: 0;
-}
+
+//Если надо сбросить маржины - примени другойкласс, .container - это сервисный класс для придания базовых падингов и маржинов контейнеру, им пользуются все, а ты его перезаписываешь.
+
+// .container {
+//   margin-left: 0;
+//   margin-right: 0;
+// }
 .header__icon--text {
   font-family: $font-main;
   @include font-size(26px, 400, 1.153, 0.04em);

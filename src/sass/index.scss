@@ -1,8 +1,8 @@
 @import './common';
+@import './utils/variables';
+@import './utils/mixins';
 @import './base/base';
 @import './base/helpers';
-@import './utils/mixins';
-@import './utils/variables';
 @import './partials/header';
 @import './partials/hero';
 @import './partials/products';
