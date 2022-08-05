@@ -203,5 +203,4 @@ body {
 }
 .button::after {
   content: "";
-  background-image: url(/src/images/arrow-red.jpg);
 }/*# sourceMappingURL=index.css.map */
