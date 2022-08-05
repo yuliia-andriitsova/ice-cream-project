@@ -169,7 +169,6 @@ body {
   right: 0;
 }
 
-
 .products__confim {
   padding-top: 165px;
   text-align: center;
@@ -205,6 +204,16 @@ body {
   line-height: 1.76;
   letter-spacing: 0.04em;
   color: #FFFFFF;
+}
+
+.products__button {
+  border: transparent;
+  border-radius: 50%;
+}
+
+.products_svg {
+  margin: 0;
+  padding: 0;
 }
 
 .howitsmade {
@@ -336,7 +345,6 @@ body {
   background: rgb(255, 245, 246);
   background: linear-gradient(to bottom, rgb(255, 245, 246) 0%, rgb(255, 245, 246) 36%, rgb(255, 255, 255) 36%, rgb(255, 255, 255) 100%);
 }
-
 
 .images {
   display: grid;
