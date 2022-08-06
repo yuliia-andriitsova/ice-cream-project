@@ -53,8 +53,8 @@
 }
 
 @mixin button-white($side-padding) {
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: baseline;
   padding: 11px $side-padding;
   width: fit-content;
 
@@ -63,6 +63,7 @@
   line-height: 21px;
   font-weight: 700;
 
+  border: none;
   background-color: white;
   color: getColor('main-clr');
 
@@ -80,8 +81,8 @@
 }
 
 @mixin button-red($side-padding) {
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: baseline;
   padding: 11px $side-padding;
   width: fit-content;
 
@@ -93,6 +94,7 @@
   background-color: getColor('main-clr');
   color: white;
 
+  border: none;
   border-radius: 20px;
   text-align: center;
 
