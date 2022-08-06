@@ -2,13 +2,36 @@
   min-width: 320px;
 
   background: rgba(255, 245, 246, 1);
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 245, 246, 1) 0%,
-    rgba(255, 245, 246, 1) 16%,
-    rgba(255, 255, 255, 1) 16%,
-    rgba(255, 255, 255, 1) 100%
-  );
+
+  @include phone {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 245, 246, 1) 0%,
+      rgba(255, 245, 246, 1) 3%,
+      rgba(255, 255, 255, 1) 3%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  @include tablet {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 245, 246, 1) 0%,
+      rgba(255, 245, 246, 1) 18%,
+      rgba(255, 255, 255, 1) 18%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  @include desktop {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 245, 246, 1) 0%,
+      rgba(255, 245, 246, 1) 9%,
+      rgba(255, 255, 255, 1) 9%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
 }
 
 .gallery__container {
@@ -115,6 +138,10 @@
 
   overflow: auto;
   overflow-x: hidden;
+
+  @include desktop {
+    margin-top: 120px;
+  }
 }
 
 .swiper-slide {
@@ -150,6 +177,39 @@
 .swiper__container {
   position: relative;
   padding: 0 15px;
+  @include phone {
+    line-height: 31px;
+
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 31px,
+      rgba(225, 225, 225, 1) 31px,
+      rgba(225, 225, 225, 1) 32px
+    );
+  }
+  @include tablet {
+    line-height: 30.24px;
+
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 30.24px,
+      rgba(225, 225, 225, 1) 30.24px,
+      rgba(225, 225, 225, 1) 31.24px
+    );
+  }
+  @include desktop {
+    line-height: 29.76px;
+
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 29.76px,
+      rgba(225, 225, 225, 1) 29.76px,
+      rgba(225, 225, 225, 1) 30.76px
+    );
+  }
   line-height: 31px;
 
   background: repeating-linear-gradient(
@@ -164,7 +224,15 @@
 .swiper__text {
   display: inline;
   width: 100%;
-  @include font-size(12px, 500, 31px);
+  @include phone {
+    @include font-size(12px, 500, 31px);
+  }
+  @include tablet {
+    @include font-size(14px, 500, 30.24px);
+  }
+  @include desktop {
+    @include font-size(16px, 500, 29.76px);
+  }
 }
 
 .swiper__dots {

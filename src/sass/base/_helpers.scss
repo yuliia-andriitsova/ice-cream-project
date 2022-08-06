@@ -17,11 +17,12 @@
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: 320px) and (max-width: 480px) {
+
+  @include phone {
+    padding-left: 20px;
+    padding-right: 20px;
     min-width: 320px;
     max-width: 480px;
   }
