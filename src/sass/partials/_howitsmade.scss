@@ -295,8 +295,8 @@
 
 .howitsmade-modal__form {
   padding: 30px;
-  height: 500px;
-  background-color: getColor(bg-clr1);
+  height: 570px;
+  background-color: getColor(bg-clr6);
 }
 
 .howitsmade-modal__title {
@@ -304,18 +304,47 @@
   font-family: titan one, titan one;
   text-align: center;
   font-style: 50px;
+  margin-bottom: 45px;
 }
 
 .howitsmade-modal__pre-title {
   @include pre-title;
   font-family: titan one, titan one;
-  color: getColor(bg-clr5);
+  color: getColor(bg-clr1);
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 15px;
+}
+
+.howitsmade-modal__pre-title--add {
+  @include pre-title;
+  font-family: titan one, titan one;
+  text-align: center;
+  padding-top: 85px;
+
+  color: getColor(main-clr);
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
 .modal-close-icon {
   width: 20px;
   height: 20px;
+  fill: aqua;
 }
+
+.animate__animated.animate__heartBeat {
+  --animate-duration: 3800ms;
+}
+
+// .animate__animated.animate__zoomIn {
+//   // --animate-duration: 2100ms;
+// }
+
+// .animate__animated.animate__backInLeft,
+// .animate__animated.animate__backInRight {
+//   // --animate-delay: 3.29s;
+// }
