@@ -69,7 +69,6 @@
   border-radius: 20px;
   text-align: center;
 
-
   cursor: pointer;
   transition: all 250ms linear;
 
@@ -104,6 +103,23 @@
   &:focus {
     color: getColor('main-clr');
     background-color: white;
+  }
+}
 
+@mixin phone {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
   }
 }
