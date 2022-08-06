@@ -1,9 +1,18 @@
 .header {
   background-color: getColor('bg-clr2');
+}
+
+.header__container {
   display: flex;
 }
 
-//Если надо сбросить маржины - примени другойкласс, .container - это сервисный класс для придания базовых падингов и маржинов контейнеру, им пользуются все, а ты его перезаписываешь.
+.header__menu {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+}
+
+//Если надо сбросить маржины - примени другой класс, .container - это сервисный класс для придания базовых падингов и маржинов контейнеру, им пользуются все, а ты его перезаписываешь.
 
 // .container {
 //   margin-left: 0;
@@ -21,6 +30,50 @@
   gap: 20px;
   margin-top: 8px;
 }
-.header__menu--icon {
-  fill: firebrick;
+
+//mobile menu
+
+.nav__menu {
+  width: 250px;
+  margin-left: auto;
+  padding: 20px;
+
+  background-color: getColor('bg-clr1');
+}
+
+.header__nav {
+  display: block;
+}
+
+.nav__button {
+  @include button-white(48.64px);
+  padding-left: 62px;
+  margin-top: 26px;
+}
+
+.nav__button--arrow {
+  margin-left: 25px;
+}
+
+.nav__list {
+  margin-top: 19px;
+}
+
+.nav__link {
+  display: block;
+  padding-top: 11px;
+  padding-bottom: 12px;
+
+  @include font-size(14px, 700, calc(18 / 14));
+
+  color: getColor('font-clr2');
+  border-bottom: 1px solid getColor('acc-clr1');
+
+  &:first-child {
+    border-top: 1px solid getColor('acc-clr1');
+  }
+}
+
+.nav__link--active {
+  color: getColor('main-clr');
 }

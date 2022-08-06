@@ -178,7 +178,7 @@
   position: relative;
   padding: 0 15px;
   @include phone {
-    line-height: 31px;
+    line-height: 32px;
 
     background: repeating-linear-gradient(
       to bottom,
@@ -189,7 +189,7 @@
     );
   }
   @include tablet {
-    line-height: 30.24px;
+    line-height: 31.24px;
 
     background: repeating-linear-gradient(
       to bottom,
@@ -200,7 +200,7 @@
     );
   }
   @include desktop {
-    line-height: 29.76px;
+    line-height: 30.76px;
 
     background: repeating-linear-gradient(
       to bottom,
@@ -225,13 +225,13 @@
   display: inline;
   width: 100%;
   @include phone {
-    @include font-size(12px, 500, 31px);
+    @include font-size(12px, 500, 0px);
   }
   @include tablet {
-    @include font-size(14px, 500, 30.24px);
+    @include font-size(14px, 500, 0px);
   }
   @include desktop {
-    @include font-size(16px, 500, 29.76px);
+    @include font-size(16px, 500, 0px);
   }
 }
 

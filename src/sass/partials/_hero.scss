@@ -1,14 +1,22 @@
 .hero {
-  background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
-    url('/src/images/header-hero_png/eclipse/Ellipse\ 320.png');
-  background-repeat: no-repeat;
-  background-position: bottom right $dist32, bottom 75px right;
   background-color: getColor('bg-clr2');
 }
 
 .hero__container {
   padding-top: 194px;
   padding-bottom: 158px;
+
+  background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
+    url('/src/images/header-hero_png/eclipse/Ellipse\ 320.png');
+  background-repeat: no-repeat;
+  background-position: bottom right $dist32, bottom 75px right;
+  // background-position: bottom right $dist32, bottom 85px right -60px;
+
+  @media screen and (min-width: 480) and (max-width: 767) {
+    background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
+      url('/src/images/header-hero_png/eclipse/hero-circe-768_1x.png');
+    background-position: bottom right $dist32, bottom 85px right -60px;
+  }
 }
 
 .hero__header {
