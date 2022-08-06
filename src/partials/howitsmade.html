@@ -18,21 +18,40 @@
      <div class="container">
      <h3 class="howitsmade__pretitle">tradition and love</h3>
      <h2 class="howitsmade__title">how it’s made?</h2>
-     <picture>
+     <div class="howitsmade__about">
+      <picture class="howitsmade__pic--cow">
+       <source
+        srcset="
+          ../src/images/How_its_made_png/cow1x_1200.png 1x,
+          ../src/images/How_its_made_png/cow2x_1200.png 2x
+        "
+        media="(min-width:1200px)"
+      />
+            <source
+        srcset="
+          ../src/images/How_its_made_png/cow1x_768.png 1x,
+          ../src/images/How_its_made_png/cow2x_768.png 2x
+        "
+        media="(min-width:768px)"
+      />
+
       <source
         srcset="
           ../src/images/How_its_made_png/cow1x_320.png 1x,
           ../src/images/How_its_made_png/cow2x_320.png 2x
         "
-        media="(min-width:320)"
+        media="(min-width:320px)"
       />
+
+
       <img
         class="img"
         src="/src/images/How_its_made_png/cow1x_320.png"
         alt="cow's image"
       />
      </picture>
-     <p class="howitsmade__text--medium">
+     <div class="howitsmade__text">
+           <p class="howitsmade__text--medium">
       Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
       cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo
       fringilla.
@@ -43,12 +62,16 @@
       suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
       tincidunt. Aliquam erat volutpat. Aenean accumsan.
      </p>
-     <button type="button">Read more</button>
+      <button type="button" class="howitsmade__button">Read more</button>
+     </div>
+     </div>
+
+    
 
      <ul class="howitsmade__list">
       <li class="howitsmade__items">
         <div class="howitsmade__components">
-         <picture>
+         <picture class="howitsmade__pic--component">
       <source
         srcset="
           ../src/images/howitsmade-componetns/component1-320-1x.png 1x,
@@ -71,7 +94,7 @@
       </li>
       <li class="howitsmade__items">
         <div class="howitsmade__components">
-             <picture>
+             <picture class="howitsmade__pic--component">
       <source
         srcset="
           ../src/images/howitsmade-componetns/component2-320-1x.png 1x,
@@ -93,7 +116,7 @@
       </li>
       <li class="howitsmade__items">
         <div class="howitsmade__components">
-             <picture>
+             <picture class="howitsmade__pic--component">
       <source
         srcset="
           ../src/images/howitsmade-componetns/component3-320-1x.png 1x,

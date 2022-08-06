@@ -5,18 +5,20 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: $dist60;
     padding-bottom: 64px;
   }
 
   @media screen and (min-width: 1200px) {
+    padding-top: $dist60;
     padding-bottom: 120px;
   }
 
   background-color: getColor('bg-clr6');
-  background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
-  background-repeat: no-repeat;
-  background-position: 0px 32%;
-  width: 100%;
+  // background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
+  // background-repeat: no-repeat;
+  // background-position: 0px 50%;
+  // width: 100%;
 }
 
 .howitsmade_background {
@@ -25,26 +27,83 @@
 }
 
 .howitsmade__pretitle {
-  @include pre-title;
-  font-family: titan one, titan one;
+  color: getColor('bg-clr3');
+  text-transform: uppercase;
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+  font-family: titan one, sans-serif;
   margin-bottom: 15px;
   color: getColor('bg-clr3');
   text-align: center;
 }
 
 .howitsmade__title {
-  @include title;
-  margin-bottom: 32px;
-  font-family: titan one, titan one;
+  color: getColor('main-clr');
+  text-transform: uppercase;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 32px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 34px;
+    line-height: 1.15;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 40px;
+    font-size: 48px;
+    line-height: 1.15;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 60px;
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
+
+  font-family: titan one, sans-serif;
   color: getColor('main-clr');
   text-align: center;
 }
 
 .howitsmade__text--medium {
-  @include font-size(12, 500, 1.62, null);
+  font-family: DM Sans, sans-serif;
   color: inherit;
-  padding-right: 60px;
+  padding-top: 40px;
+
   margin-bottom: 40px;
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    @include font-size(12, 500, 1.62, null);
+    display: block;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    @include font-size(12, 500, 1.62, null);
+    display: block;
+    // margin-right: 60px;
+    width: 80%;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include font-size(14, 500, 1.76, null);
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include font-size(16, 500, 1.76, 0.04em);
+    }
+  }
 }
 
 // .howitsmade__text--slim::before {
@@ -56,26 +115,136 @@
 // }
 
 .howitsmade__text--slim {
-  @include font-size(12, 500, 1.62, null);
+  font-family: DM Sans, sans-serif;
   color: getColor('font-clr1');
-  padding-right: 60px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    @include font-size(12, 500, 1.62, null);
+    width: 100%;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    @include font-size(12, 500, 1.62, null);
+    // width: 220px;
+    // margin-right: 60px;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include font-size(14, 500, 1.76, 0.04em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(16, 500, 1.76, 0.04em);
+  }
 }
 
-.howitsmade__items:not(:last-child) {
-  margin-bottom: 32px;
+.howitsmade__button {
+  @include button-white(38);
+  border: none;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 121px;
+  }
+}
+
+.howitsmade__about {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 99px;
+    margin-right: 105px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    gap: 32px;
+    margin-right: 2px;
+  }
+}
+
+.howitsmade__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      gap: 130px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      gap: 120px;
+    }
+  }
+
+  .howitsmade__items {
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      // width: 230px;
+      width: 72%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .howitsmade__items:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .howitsmade__components--quantity {
+  display: block;
   font-family: titan one, titan one;
   @include font-size(36, 400, 1.14, 0.04em);
   color: getColor('main-clr');
   text-transform: uppercase;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    @include font-size(36, 400, 1.14, 0.04em);
+    margin-top: 16px;
+    margin-bottom: 4px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include font-size(48, 400, 1.15, 0.04em);
+    margin-top: 36px;
+    margin-bottom: 13px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(58, 400, 1.15, 0.04em);
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
 }
 
 .howitsmade__text--bold {
-  @include font-size(12, 700, 1.7, null);
-  padding-right: 50px;
+  font-family: DM Sans, sans-serif;
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    @include font-size(12, 700, 1.7, 0);
+    width: 100%;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    @include font-size(12, 700, 1.7, 0);
+    // width: 230px;
+    // margin-right: 50px;
+    width: 72%;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include font-size(14, 700, 1.74, 0);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(16, 700, 1.76, 0.02em);
+  }
 }
 
 //------------------howitsmade-modal---------------/
@@ -98,10 +267,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media screen and (min-width: 320px) and (max-width: 479px) {
-    width: 100%;
-    @media screen and (min-width: 480px) and (max-width: 1200px) {
-      width: 440px;
+  @media screen and (min-width: 480px) and (max-width: 1200px) {
+    width: 440px;
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      width: 100%;
     }
   }
 }
