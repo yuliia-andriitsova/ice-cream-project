@@ -1,0 +1,73 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+  padding-top: 20px;
+  background-color: getColor(bg-clr6);
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: block;
+  }
+}
+
+.footer__title {
+  @include title;
+  font-family: $font-main;
+  padding-right: 100px;
+  margin-bottom: 40px;
+}
+
+.footer__pre-title {
+  @include pre-title;
+  font-family: $font-main;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+}
+
+.footer__list {
+  display: flex;
+  gap: 28px;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+
+.footer__icon {
+  fill: getColor('bg-clr9');
+  &:hover,
+  &:focus {
+    fill: getColor('main-clr');
+  }
+}
+
+.footer__contacts {
+  @include font-size(12, 700, 1.5, null);
+  font-family: $font-sec;
+  text-align: right;
+  margin-bottom: 40px;
+  
+}
+
+.footer__contacts-link {
+  @include font-size(12, 700, 1.5, null);
+  font-family: $font-sec;
+  color: getColor('main-clr');
+  &:hover,
+  &:focus {
+    color: getColor('font-clr1');
+  }
+}
+
+.copyright-wrap {
+    border-top: 1px solid getColor('acc-clr2');
+    width: 100%;
+    padding-top: 16px;
+}
+
+.footer__copyright {
+  @include font-size(14, 700, 1.25, null);
+  color: getColor('font-clr1');
+  text-align: center;
+}
+
+
