@@ -1,12 +1,24 @@
+.header {
+  @include desktop {
+    display: flex;
+  }
+}
+
 .header__container {
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .header__menu {
-  margin-left: auto;
-  border: none;
-  background-color: transparent;
+  @include toDesktop {
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+  }
+  @include desktop {
+    display: none;
+  }
 }
 
 .header__container > .nav__button--tablet {
@@ -27,33 +39,44 @@
 //mobile menu
 
 .nav__menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
+  @include toDesktop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
 
-  width: 250px;
-  height: 100vh;
-  margin-left: auto;
-  padding: 20px;
+    width: 250px;
+    height: 100vh;
+    margin-left: auto;
+    padding: 20px;
 
-  background-color: getColor('bg-clr1');
-  opacity: 0.4;
+    background-color: getColor('bg-clr1');
+    opacity: 0.4;
 
-  transform: scaleX(0);
-  // transform: translateX(100%);
-  transform-origin: right;
-  transition: transform 250ms linear, opacity 250ms linear;
+    transform: scaleX(0);
+    // transform: translateX(100%);
+    transform-origin: right;
+    transition: transform 250ms linear, opacity 250ms linear;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .menu-active {
-  transform: scaleX(100%);
-  // transform: translateX(0);
-  opacity: 1;
+  @include toDesktop {
+    transform: scaleX(100%);
+    // transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .header__nav {
-  display: block;
+  @include toDesktop {
+    display: block;
+  }
 }
 
 .nav__button {
@@ -77,21 +100,31 @@
 }
 
 .nav__list {
-  margin-top: 19px;
+  @include toDesktop {
+    margin-top: 19px;
+  }
+
+  ul {
+    @include desktop {
+      display: flex;
+    }
+  }
 }
 
 .nav__link {
-  display: block;
-  padding-top: 11px;
-  padding-bottom: 12px;
+  @include toDesktop {
+    display: block;
+    padding-top: 11px;
+    padding-bottom: 12px;
 
-  @include font-size(14px, 700, calc(18 / 14));
+    @include font-size(14px, 700, calc(18 / 14));
 
-  color: getColor('font-clr2');
-  border-bottom: 1px solid getColor('acc-clr1');
+    color: getColor('font-clr2');
+    border-bottom: 1px solid getColor('acc-clr1');
 
-  &:first-child {
-    border-top: 1px solid getColor('acc-clr1');
+    &:first-child {
+      border-top: 1px solid getColor('acc-clr1');
+    }
   }
 }
 
