@@ -6,9 +6,9 @@
 
 @mixin font-size(
   $font-size,
-  $font-weight: 400,
-  $line-height: normal,
-  $letter-spacing: normal
+  $font-weight: normal,
+  $line-height: initial,
+  $letter-spacing: initial
 ) {
   font-size: $font-size;
   font-weight: $font-weight;
@@ -122,6 +122,15 @@
 
 @mixin desktop {
   @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin bg-adapt {
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     @content;
   }
 }
