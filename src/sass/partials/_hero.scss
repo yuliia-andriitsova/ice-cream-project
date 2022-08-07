@@ -4,18 +4,6 @@
 
   @include phone {
     padding-top: 8px;
-    padding-bottom: 158px;
-
-    background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
-      url('/src/images/header-hero_png/eclipse/Ellipse_320.png');
-    background-repeat: no-repeat;
-    background-position: bottom right $dist32, bottom 75px right;
-
-    @include bg-adapt {
-      background-image: url('/src/images/header-hero_png/ice-scream2x_320.png'),
-        url('/src/images/header-hero_png/eclipse/Ellipse_320_2x.png');
-      background-size: 171px 410px, 284px 344px;
-    }
   }
 
   @include tablet {
@@ -39,13 +27,13 @@
     padding-bottom: 316px;
 
     background-image: url('/src/images/header-hero_png/ice-scream1x_1200.png'),
-      url('../images/header-hero_png/eclipse/hero-circle-1280_1x.png');
+      url('/src/images/header-hero_png/eclipse/hero-circle-1280_1x.png');
     background-repeat: no-repeat;
-    background-position: bottom right 35%, bottom 77px left 75%;
+    background-position: bottom right 30%, bottom 76px right 20%;
 
     @include bg-adapt {
       background-image: url('/src/images/header-hero_png/ice-scream2x_1200.png'),
-        url('../images/header-hero_png/eclipse/hero-circle-1280_2x.png');
+        url('/src/images/header-hero_png/eclipse/hero-circle-1280_2x.png');
       background-size: 236px 557px, 534px 534px;
     }
   }
@@ -55,7 +43,19 @@
   display: flex;
 
   @include phone {
-    margin-top: 136px;
+    padding-top: 136px;
+    padding-bottom: 158px;
+
+    background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
+      url('/src/images/header-hero_png/eclipse/Ellipse_320.png');
+    background-repeat: no-repeat;
+    background-position: bottom right $dist32, bottom 75px right;
+
+    @include bg-adapt {
+      background-image: url('/src/images/header-hero_png/ice-scream2x_320.png'),
+        url('/src/images/header-hero_png/eclipse/Ellipse_320_2x.png');
+      background-size: 171px 410px, 284px 344px;
+    }
   }
   @include tablet {
     margin-top: 10px;
