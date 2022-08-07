@@ -1,26 +1,92 @@
 .header {
-  background-color: getColor('bg-clr2');
-  display: flex;
+  position: fixed;
+  width: 100%;
+
+  background-color: transparent;
 }
 
-//Если надо сбросить маржины - примени другойкласс, .container - это сервисный класс для придания базовых падингов и маржинов контейнеру, им пользуются все, а ты его перезаписываешь.
+.header__container {
+  // position: relative;
+
+  display: flex;
+  padding-top: 8px;
+}
+
+.header__menu {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+}
+
+//Если надо сбросить маржины - примени другой класс, .container - это сервисный класс для придания базовых падингов и маржинов контейнеру, им пользуются все, а ты его перезаписываешь.
 
 // .container {
 //   margin-left: 0;
 //   margin-right: 0;
 // }
-.header__icon--text {
-  font-family: $font-main;
-  @include font-size(26px, 400, 1.153, 0.04em);
-  text-transform: uppercase;
+
+//mobile menu
+
+.nav__menu {
+  position: absolute;
+  // display: none;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  width: 250px;
+  height: 100vh;
+  margin-left: auto;
+  padding: 20px;
+
+  background-color: getColor('bg-clr1');
+  opacity: 0.4;
+
+  transform: scaleX(0);
+  // transform: translateX(100%);
+  transform-origin: right;
+  transition: transform 250ms linear, opacity 250ms linear;
+}
+
+.menu-active {
+  transform: scaleX(100%);
+  // transform: translateX(0);
+  opacity: 1;
+}
+
+.header__nav {
+  display: block;
+}
+
+.nav__button {
+  @include button-white(48.64px);
+  padding-left: 62px;
+  margin-top: 26px;
+}
+
+.nav__button--arrow {
+  margin-left: 25px;
+}
+
+.nav__list {
+  margin-top: 19px;
+}
+
+.nav__link {
+  display: block;
+  padding-top: 11px;
+  padding-bottom: 12px;
+
+  @include font-size(14px, 700, calc(18 / 14));
+
+  color: getColor('font-clr2');
+  border-bottom: 1px solid getColor('acc-clr1');
+
+  &:first-child {
+    border-top: 1px solid getColor('acc-clr1');
+  }
+}
+
+.nav__link--active {
   color: getColor('main-clr');
-}
-.header__icon {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: 8px;
-}
-.header__menu--icon {
-  fill: firebrick;
 }

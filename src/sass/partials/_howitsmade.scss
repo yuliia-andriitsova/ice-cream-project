@@ -1,7 +1,7 @@
 .howitsmade {
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @media screen and (min-width: 0px) and (max-width: 767px) {
     padding-top: $dist60;
-    padding-bottom: $dist60;
+    padding-bottom: 60px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -14,11 +14,23 @@
     padding-bottom: 120px;
   }
 
-  background-color: getColor('bg-clr6');
-  // background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
-  // background-repeat: no-repeat;
-  // background-position: 0px 50%;
-  // width: 100%;
+
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    background-color: getColor('bg-clr6');
+    background-image: url('/src/images/How_its_made_png/milk-splash1x_320.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px 45%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-color: getColor('bg-clr6');
+    background-image: url('/src/images/How_its_made_png/milk-splash1x_1200.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px 38%;
+  }
+
 }
 
 .howitsmade_background {
@@ -33,10 +45,12 @@
     font-size: 30px;
     line-height: 1.13;
     letter-spacing: 0.04em;
+    margin-bottom: 16px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     font-size: 26px;
     line-height: 1.15;
+    margin-bottom: 16px;
   }
   @media screen and (max-width: 767px) {
     font-size: 18px;
@@ -59,11 +73,13 @@
     margin-right: auto;
     font-size: 34px;
     line-height: 1.15;
+    letter-spacing: 0.04em;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-bottom: 40px;
     font-size: 48px;
     line-height: 1.15;
+    letter-spacing: 0.04em;
   }
 
   @media screen and (min-width: 1200px) {
@@ -81,28 +97,33 @@
 .howitsmade__text--medium {
   font-family: DM Sans, sans-serif;
   color: inherit;
-  padding-top: 40px;
 
   margin-bottom: 40px;
-  @media screen and (min-width: 320px) and (max-width: 479px) {
-    @include font-size(12, 500, 1.62, null);
+  @media screen and (min-width: 0px) and (max-width: 479px) {
+    @include font-size(12px, 500, 1.62, null);
     display: block;
-    width: 100%;
+    min-width: 280px;
+    padding-top: 40px;
   }
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    @include font-size(12, 500, 1.62, null);
+    @include font-size(12px, 500, 1.62, null);
     display: block;
-    // margin-right: 60px;
-    width: 80%;
+    padding-top: 40px;
+    margin-right: 60px;
+  }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      @include font-size(14, 500, 1.76, null);
-    }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include font-size(14px, 500, 1.76, null);
+    display: block;
+    padding-top: 0;
+  }
 
-    @media screen and (min-width: 1200px) {
-      @include font-size(16, 500, 1.76, 0.04em);
-    }
+  @media screen and (min-width: 1200px) {
+    @include font-size(16px, 500, 1.76, 0.04em);
+    display: block;
+    margin-bottom: 32px;
+    padding-top: 90px;
   }
 }
 
@@ -117,26 +138,31 @@
 .howitsmade__text--slim {
   font-family: DM Sans, sans-serif;
   color: getColor('font-clr1');
-  margin-bottom: 20px;
 
-  @media screen and (min-width: 320px) and (max-width: 479px) {
+  display: block;
+
+  @media screen and (min-width: 0px) and (max-width: 479px) {
     @include font-size(12, 500, 1.62, null);
-    width: 100%;
+    margin-bottom: 20px;
+    min-width: 280px;
   }
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
     @include font-size(12, 500, 1.62, null);
+    margin-bottom: 20px;
     // width: 220px;
-    // margin-right: 60px;
-    width: 80%;
+    margin-right: 60px;
+    // width: 80%;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     @include font-size(14, 500, 1.76, 0.04em);
+    margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1200px) {
     @include font-size(16, 500, 1.76, 0.04em);
+    margin-bottom: 40px;
   }
 }
 
@@ -150,7 +176,7 @@
     margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
-    margin-bottom: 121px;
+    margin-bottom: 81px;
   }
 }
 
@@ -177,17 +203,18 @@
 
     @media screen and (min-width: 1200px) {
       gap: 120px;
+      padding-top: 40px;
     }
   }
 
   .howitsmade__items {
     @media screen and (min-width: 320px) and (max-width: 479px) {
-      width: 100%;
+      // width: 100%;
     }
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
       // width: 230px;
-      width: 72%;
+      // width: 72%;
     }
   }
 }
@@ -226,16 +253,17 @@
 .howitsmade__text--bold {
   font-family: DM Sans, sans-serif;
 
-  @media screen and (min-width: 320px) and (max-width: 479px) {
+  @media screen and (min-width: 0px) and (max-width: 479px) {
     @include font-size(12, 700, 1.7, 0);
-    width: 100%;
+    width: 230px;
   }
 
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     @include font-size(12, 700, 1.7, 0);
-    // width: 230px;
+
     // margin-right: 50px;
-    width: 72%;
+    // width: 72%;
+    width: 230px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -277,8 +305,8 @@
 
 .howitsmade-modal__form {
   padding: 30px;
-  height: 500px;
-  background-color: getColor(bg-clr1);
+  height: 570px;
+  background-color: getColor(bg-clr6);
 }
 
 .howitsmade-modal__title {
@@ -286,18 +314,47 @@
   font-family: titan one, titan one;
   text-align: center;
   font-style: 50px;
+  margin-bottom: 45px;
 }
 
 .howitsmade-modal__pre-title {
   @include pre-title;
   font-family: titan one, titan one;
-  color: getColor(bg-clr5);
+  color: getColor(bg-clr1);
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 15px;
+}
+
+.howitsmade-modal__pre-title--add {
+  @include pre-title;
+  font-family: titan one, titan one;
+  text-align: center;
+  padding-top: 85px;
+
+  color: getColor(main-clr);
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
 .modal-close-icon {
   width: 20px;
   height: 20px;
+  fill: aqua;
 }
+
+.animate__animated.animate__heartBeat {
+  --animate-duration: 3800ms;
+}
+
+// .animate__animated.animate__zoomIn {
+//   // --animate-duration: 2100ms;
+// }
+
+// .animate__animated.animate__backInLeft,
+// .animate__animated.animate__backInRight {
+//   // --animate-delay: 3.29s;
+// }

@@ -1,33 +1,135 @@
 .hero {
-  background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
-    url('/src/images/header-hero_png/eclipse/Ellipse\ 320.png');
-  background-repeat: no-repeat;
-  background-position: bottom right $dist32, bottom 75px right;
   background-color: getColor('bg-clr2');
 }
 
 .hero__container {
-  padding-top: 194px;
-  padding-bottom: 158px;
+  display: flex;
+
+  @include phone {
+    padding-top: 194px;
+    padding-bottom: 158px;
+
+    background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
+      url('/src/images/header-hero_png/eclipse/Ellipse_320.png');
+    background-repeat: no-repeat;
+    background-position: bottom right $dist32, bottom 75px right;
+
+    @include bg-adapt {
+      background-image: url('/src/images/header-hero_png/ice-scream2x_320.png'),
+        url('/src/images/header-hero_png/eclipse/Ellipse_320_2x.png');
+      background-size: 171px 410px, 284px 344px;
+    }
+  }
+
+  @include tablet {
+    padding-top: 92px;
+    padding-bottom: 190px;
+
+    background-image: url('/src/images/header-hero_png/ice-scream1x_768.png'),
+      url('/src/images/header-hero_png/eclipse/hero-circe-768_1x.png');
+    background-repeat: no-repeat;
+    background-position: bottom right 45%, bottom $dist40 left 60%;
+
+    @include bg-adapt {
+      background-image: url('/src/images/header-hero_png/ice-scream2x_768.png'),
+        url('/src/images/header-hero_png/eclipse/hero-circle-768_2x.png');
+      background-size: 143px 336px, 335px 333px;
+    }
+  }
 }
 
 .hero__header {
-  width: 218px;
   font-family: $font-main;
-  @include font-size(26px, 400, 1.153, 0.04em);
+
   text-transform: uppercase;
   color: white;
+
+  @include phone {
+    width: 218px;
+    @include font-size(26px, 400, 1.153, 0.04em);
+  }
+
+  @include tablet {
+    width: 162px;
+    @include font-size(22px, 400, calc(25 / 22), 0.04em);
+  }
 }
 
 .hero__header > .hero__header--accent {
-  font-size: 48px;
-  line-height: calc(46 / 48);
+  color: getColor('main-clr');
+
+  @include phone {
+    font-size: 48px;
+    line-height: calc(46 / 48);
+  }
+
+  @include tablet {
+    font-size: 34px;
+    line-height: calc(31 / 34);
+  }
+}
+
+.hero__side {
+  @include phone {
+    display: none;
+  }
+  @include tablet {
+    margin-left: auto;
+  }
+}
+
+.side__item {
+  margin-left: auto;
+
+  text-align: end;
+
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  @include tablet {
+    padding-top: 2px;
+    padding-right: 10px;
+
+    background-image: url(/src/images/header-hero_png/circle/circle_s_768_1x.png);
+    background-size: 16px 16px;
+
+    @include bg-adapt {
+      background-image: url(/src/images/header-hero_png/circle/circle_s_768_2x.png);
+    }
+  }
+
+  @include desktop {
+    padding-top: 4px;
+    padding-right: 20px;
+
+    background-image: url(/src/images/header-hero_png/circle/circle_s_1280_1x.png);
+    background-size: 30px 30px;
+
+    @include bg-adapt {
+      background-image: url(/src/images/header-hero_png/circle/circle_s_1280_2x.png);
+    }
+  }
+}
+
+.side__main-text {
+  display: block;
+  @include font-size(28px, 400, calc(32 / 28), 0.04);
+  font-family: $font-main;
 
   color: getColor('main-clr');
 }
 
+.side__text {
+  display: block;
+
+  @include font-size(8px, 400, calc(10 / 8));
+
+  color: getColor('font-clr2');
+}
+
 .hero__list {
   display: flex;
+  margin-top: $dist20;
   gap: 8px;
 }
 

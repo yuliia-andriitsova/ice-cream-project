@@ -1,14 +1,35 @@
 <section class="header">
-    <div class="container">
+    <div class="header__container container">
+
         <div class="header__icon">
-            <img src="./images/favicon.ico" alt="icon" width="49px">
-            <p class="header__icon--text">Ice Cream</p>
+            <img srcset="/src/images/logo_1x.png 1x, /src/images/logo_2x.png 2x" src="/src/images/logo_1x.png"
+                alt="Logo">
         </div>
-        <button type="button" class="header__menu">
-            <svg width="20" height="12" aria-label="mobail menu">
-                <use class="header__menu--icon" href="./images/icons.svg#icon-burger"></use>
+
+        <button type="button" class="header__menu" data-menu-open>
+            <svg width="20" height="12" aria-label="mobile menu">
+                <use class="header__menu--icon" href="/src/images/icons.svg#icon-burger-1"></use>
             </svg>
         </button>
+
+    </div>
+    <div class="nav__menu" data-mobile-menu>
+        <button type="button" class="header__menu header__nav" data-menu-close>
+            <svg width="20" height="12" aria-label="mobile menu">
+                <use class="header__menu--icon" href="/src/images/icons.svg#icon-close-1"></use>
+            </svg>
+        </button>
+        <button class="nav__button" type="button">Buy now <img class="nav__button--arrow"
+                src="/src/images/right-arrow.svg"></button>
+        <nav class="nav__list">
+            <ul>
+                <li><a class="nav__link nav__link--active" href="#">Home</a></li>
+                <li><a class="nav__link" href="#">About us</a></li>
+                <li><a class="nav__link" href="#">How it's made?</a></li>
+                <li><a class="nav__link" href="#">Our products</a></li>
+                <li><a class="nav__link" href="#">Contacts</a></li>
+            </ul>
+        </nav>
     </div>
     </div>
 </section>

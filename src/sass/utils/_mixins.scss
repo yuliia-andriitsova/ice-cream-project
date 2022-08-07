@@ -6,9 +6,9 @@
 
 @mixin font-size(
   $font-size,
-  $font-weight: 400,
-  $line-height: normal,
-  $letter-spacing: normal
+  $font-weight: normal,
+  $line-height: initial,
+  $letter-spacing: initial
 ) {
   font-size: $font-size;
   font-weight: $font-weight;
@@ -53,8 +53,8 @@
 }
 
 @mixin button-white($side-padding) {
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: baseline;
   padding: 11px $side-padding;
   width: fit-content;
 
@@ -63,6 +63,7 @@
   line-height: 21px;
   font-weight: 700;
 
+  border: none;
   background-color: white;
   color: getColor('main-clr');
 
@@ -80,8 +81,8 @@
 }
 
 @mixin button-red($side-padding) {
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: baseline;
   padding: 11px $side-padding;
   width: fit-content;
 
@@ -93,6 +94,7 @@
   background-color: getColor('main-clr');
   color: white;
 
+  border: none;
   border-radius: 20px;
   text-align: center;
 
@@ -120,6 +122,15 @@
 
 @mixin desktop {
   @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin bg-adapt {
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     @content;
   }
 }
