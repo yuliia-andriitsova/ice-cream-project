@@ -33,6 +33,22 @@
       background-size: 143px 336px, 335px 333px;
     }
   }
+
+  @include desktop {
+    padding-top: $dist40;
+    padding-bottom: 316px;
+
+    background-image: url('/src/images/header-hero_png/ice-scream1x_1200.png'),
+      url('../images/header-hero_png/eclipse/hero-circle-1280_1x.png');
+    background-repeat: no-repeat;
+    background-position: bottom right 35%, bottom 77px left 75%;
+
+    @include bg-adapt {
+      background-image: url('/src/images/header-hero_png/ice-scream2x_1200.png'),
+        url('../images/header-hero_png/eclipse/hero-circle-1280_2x.png');
+      background-size: 236px 557px, 534px 534px;
+    }
+  }
 }
 
 .hero__container {
@@ -44,10 +60,15 @@
   @include tablet {
     margin-top: 10px;
   }
+  @include desktop {
+    margin-top: $dist60;
+  }
 }
 
 .hero__left {
-  margin-top: 10px;
+  @include phone {
+    margin-top: 10px;
+  }
 }
 
 .hero__header {
@@ -65,6 +86,11 @@
     width: 162px;
     @include font-size(22px, 400, calc(25 / 22), 0.04em);
   }
+
+  @include desktop {
+    width: 277px;
+    @include font-size(38px, 400, calc(44 / 38), 0.04em);
+  }
 }
 
 .hero__header > .hero__header--accent {
@@ -79,6 +105,11 @@
     font-size: 34px;
     line-height: calc(31 / 34);
   }
+
+  @include desktop {
+    font-size: 58px;
+    line-height: calc(52 / 58);
+  }
 }
 
 .hero__side {
@@ -86,6 +117,10 @@
     display: none;
   }
   @include tablet {
+    margin-left: auto;
+  }
+  @include desktop {
+    margin-top: 5px;
     margin-left: auto;
   }
 }
@@ -129,6 +164,11 @@
   font-family: $font-main;
 
   color: getColor('main-clr');
+
+  @include desktop {
+    font-size: 46px;
+    line-height: calc(53 / 46);
+  }
 }
 
 .side__text {
@@ -146,16 +186,19 @@
 }
 
 .hero__item .hero__link {
-  display: block;
-  padding: 7px 12px;
+  @include button-red(12px);
 
-  font-family: $font-sec;
-  font-size: 8px;
-  line-height: 10px;
+  @include toDesktop {
+    padding: 7px 12px;
 
-  background-color: getColor('main-clr');
-  color: white;
-  border-radius: 20px;
+    @include font-size(8px, 400, calc(10 / 8));
+  }
+
+  @include desktop {
+    padding: 11px 23px;
+
+    @include font-size(14px, 400, calc(18 / 14));
+  }
 }
 
 .hero__list .hero__item:last-child .hero__link {
