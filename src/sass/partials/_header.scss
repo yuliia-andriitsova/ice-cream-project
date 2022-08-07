@@ -1,15 +1,6 @@
-.header {
-  position: fixed;
-  width: 100%;
-
-  background-color: transparent;
-}
-
 .header__container {
-  // position: relative;
-
   display: flex;
-  padding-top: 8px;
+  align-items: center;
 }
 
 .header__menu {
@@ -18,18 +9,25 @@
   background-color: transparent;
 }
 
-//Если надо сбросить маржины - примени другой класс, .container - это сервисный класс для придания базовых падингов и маржинов контейнеру, им пользуются все, а ты его перезаписываешь.
+.header__container > .nav__button--tablet {
+  display: none;
 
-// .container {
-//   margin-left: 0;
-//   margin-right: 0;
-// }
+  @include tablet {
+    display: flex;
+    margin: 0 0 0 32px;
+    padding-left: 36px;
+    padding-right: 36px;
+
+    .nav__button--arrow {
+      margin-left: 13px;
+    }
+  }
+}
 
 //mobile menu
 
 .nav__menu {
   position: absolute;
-  // display: none;
   top: 0;
   right: 0;
   z-index: 1;
@@ -61,11 +59,21 @@
 .nav__button {
   @include button-white(48.64px);
   padding-left: 62px;
-  margin-top: 26px;
-}
+  margin: 26px auto 0;
 
-.nav__button--arrow {
-  margin-left: 25px;
+  .nav__button--arrow {
+    margin-left: 25px;
+  }
+  @include tablet {
+    // margin-top: 24px;
+    margin-top: 24px;
+    padding-left: 54px;
+    padding-right: 54px;
+
+    .nav__button--arrow {
+      margin-left: 21px;
+    }
+  }
 }
 
 .nav__list {
