@@ -1,12 +1,9 @@
 .hero {
+  position: relative;
   background-color: getColor('bg-clr2');
-}
-
-.hero__container {
-  display: flex;
 
   @include phone {
-    padding-top: 194px;
+    padding-top: 8px;
     padding-bottom: 158px;
 
     background-image: url('/src/images/header-hero_png/ice-scream1x_320.png'),
@@ -22,7 +19,7 @@
   }
 
   @include tablet {
-    padding-top: 92px;
+    padding-top: $dist32;
     padding-bottom: 190px;
 
     background-image: url('/src/images/header-hero_png/ice-scream1x_768.png'),
@@ -36,6 +33,21 @@
       background-size: 143px 336px, 335px 333px;
     }
   }
+}
+
+.hero__container {
+  display: flex;
+
+  @include phone {
+    margin-top: 136px;
+  }
+  @include tablet {
+    margin-top: 10px;
+  }
+}
+
+.hero__left {
+  margin-top: 10px;
 }
 
 .hero__header {
