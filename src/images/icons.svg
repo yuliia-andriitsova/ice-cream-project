@@ -56,7 +56,9 @@
 <path fill="none" stroke="#fff" style="stroke: var(--color1, #d41443)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2 29.481l28-26.963"></path>
 
 </symbol>
-
+<symbol id="icon-close-btn" viewBox="0 0 32 32">
+<path d="M26.667 7.303l-1.97-1.97-7.808 7.808-7.808-7.808-1.97 1.97 7.808 7.808-7.808 7.808 1.97 1.97 7.808-7.808 7.808 7.808 1.97-1.97-7.808-7.808 7.808-7.808z"></path>
+</symbol>
 
 </defs>
 </svg>
