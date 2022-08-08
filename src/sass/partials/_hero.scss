@@ -242,25 +242,31 @@
     display: none;
   }
   @include tablet {
-    background-image: url(../images/header-hero_png/milk1x_768.png),
-      url(../images/header-hero_png/milk2x_768.png);
-
+    background-image: url(../images/header-hero_png/milk1x_768.png);
     background-repeat: no-repeat;
+    background-size: 152px 154px;
     width: 152px;
     height: 154px;
     left: 32px;
     top: 146px;
+
+    @include bg-adapt {
+      background-image: url(../images/header-hero_png/milk2x-1_768.png);
+    }
   }
 
   @include desktop {
-    background-image: url(../images/header-hero_png/milk1x_1200.png),
-      url(../images/header-hero_png/milk2x_1200.png);
-
+    background-image: url(../images/header-hero_png/milk1x_1200.png);
+    background-size: 213px 216px;
     background-repeat: no-repeat;
     width: 213px;
     height: 216px;
     left: 15px;
     top: 233px;
+
+    @include bg-adapt {
+      background-image: url(../images/header-hero_png/milk2x_1200.png);
+    }
   }
 }
 
@@ -271,25 +277,29 @@
     display: none;
   }
   @include tablet {
-    background-image: url(../images/header-hero_png/tasty1x_768.png),
-      url(../images/header-hero_png/tasty2x_768.png);
-
+    background-image: url(../images/header-hero_png/tasty1x_768.png);
+    background-size: 190px 150px;
     background-repeat: no-repeat;
     width: 190px;
     height: 150px;
     right: 0%;
     top: 131%;
+    @include bg-adapt {
+      background-image: url(../images/header-hero_png/tasty2x_768.png);
+    }
   }
 
   @include desktop {
-    background-image: url(../images/header-hero_png/tasty1x_1200.png),
-      url(../images/header-hero_png/tasty2x_1200.png);
-
+    background-image: url(../images/header-hero_png/tasty1x_1200.png);
+    background-size: 304px 241px;
     background-repeat: no-repeat;
     width: 304px;
     height: 241px;
     right: 0%;
     top: 137%;
+    @include bg-adapt {
+      background-image: url(../images/header-hero_png/tasty2x_1200.png);
+    }
   }
 }
 .hero__button {
