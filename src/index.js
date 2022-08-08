@@ -1,6 +1,7 @@
 (() => {
   //   Modal Window
 
+
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
@@ -109,8 +110,9 @@
   hdr.openModalHdrMob.addEventListener('click', toggleModal);
   hdr.closeModalHdr.addEventListener('click', toggleModal);
 
-  function toggleModal() {
-    document.body.classList.toggle('modal-open');
-    hdr.modalHdr.classList.toggle('is-hidden');
-  }
+
+  // function toggleModal() {
+  //   document.body.classList.toggle('modal-open');
+  //   hdr.modalHdr.classList.toggle('is-hidden');
+  // }
 })();

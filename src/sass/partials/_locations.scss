@@ -48,12 +48,15 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 
-  &:hover {
-    box-shadow: 0px 8px 30px rgba(212, 20, 68, 0.33);
-  }
   @media screen and (min-width: 1200px) {
     padding: 40px 40px;
   }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 8px 30px rgba(212, 20, 68, 0.281);
+  }
+
 }
 
 .locations__item-about {
@@ -183,9 +186,12 @@
 
 .locations__btn-map {
     position: relative;
-  @include font-size(16, 700, 1.3, null);
-  padding: 10px 30px 10px 17px;
 
+  padding: 10px 25px;
+  width: fit-content;
+
+
+  @include font-size(16, 700, 1.3, null);
   background-color: getColor('acc-clr5');
   color: getColor('font-clr2');
 
@@ -195,30 +201,30 @@
   cursor: pointer;
   transition: all 250ms linear;
 
+  @media screen and (min-width: 768px) {
+    padding: 10px 35px;
+  }
+
   &:hover,
   &:focus {
     color: getColor('main-clr');
-    background-color: getColor('font-clr2');
-    box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.33);
-  }
 
-  @media screen and (min-width: 1200px) {
-    padding: 10px 36px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.281);
   }
 }
 
-.icon__btn-map {
-    fill: currentColor;
+.icon-map {
     position: absolute;
-    top: 12px;
-    right: 17px;
+    fill: currentColor;
+    top: 13px;
 }
 
-.locations__btn-franchise {
+.franchise__btn {
     position: relative;
   font-family: $font-sec;
   @include font-size(16, 700, 1.3, null);
-  padding: 10px 49px 10px 32px;
+  padding: 10px 32px;
 
   background-color: getColor('font-clr2');
   color: getColor('main-clr');
@@ -230,180 +236,248 @@
   cursor: pointer;
   transition: all 250ms linear;
 
+  @media screen and (min-width: 768px) {
+    padding: 10px 36px;
+  }
+
   &:hover,
   &:focus {
     color: getColor('font-clr2');
     background-color: getColor('main-clr');
-    box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.33);
+
+    box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.281);
   }
 }
 
-.icon__btn-franchise {
-    fill: currentColor;
+.icon-franc {
     position: absolute;
-    top: 12px;
-    right: 31px;
+    fill: currentColor;
+    top: 13px;
 }
 
 
-// ------------Franchise-modal--------//
 
 
 
-// .franchise__modal-backdrop {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.2);
-//     opacity: 1;
-//     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//     overflow-y: scroll;
-//     padding: 93px 15px 0 15px;
-//   }
-  
-//   .backdrop.is-hidden {
-//     opacity: 0;
-//     pointer-events: none;
-//   }
-  
-//   .backdrop.is-hidden .franchise__modal {
-//     transform: translate(-50%, -50%) scale(0.5);
-//   }
-  
-//   .franchise__modal {
-//     position: relative;
-//     padding: 40px;
-  
-//     border-radius: 4px;
-//     background-color: getColor('bg-clr6');
-//     box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.33);
-//     @media screen and (min-width: 768px) {
-//         position: absolute;
-//       top: 50%;
-//     left: 50%;
-//     max-width: 450px;
-//     width: 100%;
-//     height: 100vh;
-//     transform: translate(-50%, -50%) scale(1);
-//     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//     }
-    
-//     @media screen and (min-width: 1200px) {
-//       position: absolute;
-//       top: 50%;
-//     left: 50%;
-//     max-width: 528px;
-//     width: 100%;
-//     height: 581px;
-//     transform: translate(-50%, -50%) scale(1);
-//     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//     }
-//     }
 
-//   .close-btn {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     margin-left: auto;
-//     position: absolute;
-//     top: 8px;
-//     right: 8px;
-//     width: 30px;
-//     height: 30px;
-//     border-radius: 50%;
-//     border: 2px solid rgba(212, 20, 68, 0.33);
-//     color: getColor('main-clr');
-//     background-color: transparent;
-//     cursor: pointer;
-//     &:hover,
-//     &:focus {
-//       color: var(--accent-color);
-//     }
-//   }
+
+
+.location-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+  padding: 93px 15px 0 15px;
+  z-index: 1;
+}
+
+
+.location__modal {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
   
-//   .close-icon {
-//     fill: getColor('main-clr');
-//   }
-  
-//   .franchise__modal-title {
-//     font-family: $font-main;
-//     color: getColor('main-clr');
-//     font-size: 18px;
-//     margin-bottom: 12px;
-//     text-align: center;
-//   }
-  
-//   .franchise__modal-field {
-//     margin-bottom: 10px;
-//   }
-  
-//   .modal-label {
-//     display: block;
-//     margin-bottom: 5px;
-//       font-size: 12px;
-//       line-height: 1.17;
-//       letter-spacing: 0.01em;
-//       color: getColor('main-clr');
-//   }
-  
-//   .modal-input {
-//     width: 100%;
-//     height: 40px;
-//     border: 1px solid rgba(212, 20, 68, 0.33);
-//     border-radius: 4px;
-//     padding-left: 40px;
-//     &:focus {
-//       outline: none;
-//       border: 1px solid var(--accent-color);
-//     }
-//   }
-  
-//   .input-text {
-//     width: 100%;
-//     height: 120px;
-//     border: 1px solid rgba(212, 20, 68, 0.33);
-//     border-radius: 4px;
-//     padding: 12px 16px;
-//     resize: none;
-  
-//     &:focus {
-//       outline: none;
-//       border: 1px solid var(--accent-color);
-//     }
-  
-//     &::placeholder {
-//         font-size: 12px;
-//         line-height: 1.17;
-//         letter-spacing: 0.01em;
-  
-//       color: rgba(212, 20, 68, 0.33);
-//     }
-//   }
-  
-//   .input-wrap {
-//     position: relative;
-//   }
-  
-//   .franchise__modal-button {
-//     display: flex;
-//     align-items: center;
-//     margin: auto;
-//     padding: 6px 35px;
-//     @include font-size(16, 700, 1.87, 0.06em);
-  
-//     color: getColor('font-clr2');
-//     background-color: getColor('main-clr');
-//     border-radius: 22px;
-//     border: 1px solid transparent;
-//     transition-duration: 250ms;
-//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
-//     cursor: pointer;
-  
-//     &:hover,
-//     &:focus {
-//       box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.33);
-//     }
-//   }
+    @media screen and (min-width: 1200px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+iframe {
+    width: 96%;
+}
+
+.close-loc-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 26px;
+  height: 26px;
+  border: none;
+  color: getColor('font-clr3');
+  background-color: transparent;
+  cursor: pointer;
+
+}
+
+.close-loc-icon {
+    fill: currentColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+.franchise__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  padding: 40px 15px 0 15px;
+}
+
+.franchise__modal {
+  position: relative;
+  padding: 30px;
+
+  border-radius: 4px;
+  background-color: getColor('bg-clr6');
+  box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.281);
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 400px;
+    width: 100%;
+    height: 540px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 500px;
+    width: 100%;
+    height: 540px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 20, 68, 0.281);
+  color: getColor('main-clr');
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-icon {
+  fill: currentColor;
+}
+
+.franchise__modal-title {
+  margin-bottom: 12px;
+  @include font-size(18, 500, 1.5, 0.04em);
+  font-family: $font-main;
+  text-align: center;
+  color: getColor('main-clr');
+}
+
+.franchise__modal-field {
+  margin-bottom: 10px;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 6px;
+  text-align: left;
+  font-family: $font-sec;
+  @include font-size(12, 400, 1.17, 0.01em);
+  color: getColor('main-clr');
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(212, 20, 68, 0.281);
+  border-radius: 4px;
+  padding-left: 40px;
+  &:focus {
+    outline: none;
+    border: 1px solid getColor('main-clr');
+  }
+}
+
+.input-text {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(212, 20, 68, 0.281);
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+
+  &:focus {
+    outline: none;
+    border: 1px solid getColor('main-clr');
+  }
+
+  &::placeholder {
+    @include font-size(12, 400, 1.17, 0.01em);
+    color: rgba(212, 20, 68, 0.281);
+  }
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.modal-button {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 4px 35px;
+  @include font-size(16, 400, 1.8, 0.06em);
+  font-family: $font-sec;
+
+  color: getColor('font-clr2');
+  background-color: getColor('main-clr');
+  border-radius: 22px;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.281);
+  }
+}
+
