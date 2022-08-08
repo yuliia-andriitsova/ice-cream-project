@@ -5,9 +5,10 @@
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
-  margin: 0;
+  @include toDesktop {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__menu {
@@ -62,6 +63,9 @@
   @include desktop {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 128px;
+    width: 100%;
   }
 }
 
@@ -81,11 +85,14 @@
 
 .nav__button {
   @include button-white(48.64px);
-  padding-left: 62px;
-  margin: 26px auto 0;
 
-  .nav__button--arrow {
-    margin-left: 25px;
+  @include toDesktop {
+    padding-left: 62px;
+    margin: 26px auto 0;
+
+    .nav__button--arrow {
+      margin-left: 25px;
+    }
   }
   @include tablet {
     // margin-top: 24px;
@@ -97,6 +104,10 @@
       margin-left: 21px;
     }
   }
+
+  @include desktop {
+    margin-left: auto;
+  }
 }
 
 .nav__list {
@@ -107,6 +118,7 @@
   ul {
     @include desktop {
       display: flex;
+      gap: 35px;
     }
   }
 }
@@ -124,6 +136,19 @@
 
     &:first-child {
       border-top: 1px solid getColor('acc-clr1');
+    }
+  }
+
+  @include desktop {
+    @include font-size(16px, 700, calc(21 / 16));
+    color: getColor('font-clr2');
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    &:hover,
+    &:focus {
+      color: getColor('main-clr');
     }
   }
 }

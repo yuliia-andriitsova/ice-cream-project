@@ -134,12 +134,20 @@
 
 .mySwiper {
   margin-top: 60px;
-  padding-bottom: 28px;
 
   overflow: auto;
   overflow-x: hidden;
 
+  @include phone {
+    padding-bottom: 28px;
+  }
+
+  @include tablet {
+    padding-bottom: 44px;
+  }
+
   @include desktop {
+    padding-bottom: 46px;
     margin-top: 120px;
   }
 }
@@ -148,6 +156,32 @@
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+
+    width: 32px;
+    height: 4px;
+
+    background-image: url(/src/images/feedback/dots.svg);
+    background-repeat: repeat;
+    background-size: contain;
+
+    transform: translateX(-50%);
+
+    @include phone {
+      bottom: 37px;
+    }
+    @include tablet {
+      bottom: 39px;
+    }
+    @include desktop {
+      bottom: 45px;
+    }
+  }
 }
 
 .swiper__face {
@@ -235,24 +269,27 @@
   }
 }
 
-.swiper__dots {
-  display: block;
-  bottom: 60px;
-
-  margin-top: $dist16;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .swiper__name {
   display: inline-block;
-  margin-top: $dist16;
 
   @include font-size(14px, 500, 1.86);
+
+  @include phone {
+    margin-top: 36px;
+  }
+
+  @include tablet {
+    margin-top: 24px;
+  }
+
+  @include desktop {
+    margin-top: 36px;
+  }
 }
 
-.swiper-pagination-horizontal {
-  bottom: 60px;
+.mySwiper > .swiper-pagination-horizontal {
+  bottom: 0;
+  z-index: 1;
 }
 
 .swiper-pagination-bullet {
