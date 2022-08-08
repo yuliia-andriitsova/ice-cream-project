@@ -1,5 +1,4 @@
 (() => {
-
   //   Modal Window
 
   const refs = {
@@ -20,11 +19,16 @@
   const menuOpenBtn = document.querySelector('[data-menu-open]');
   const menuCloseBtn = document.querySelector('[data-menu-close]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
+  const mobileClose = document.querySelector('[data-mobile-close]');
 
   menuOpenBtn.addEventListener('click', toggleMenu);
   menuCloseBtn.addEventListener('click', toggleMenu);
+  mobileClose.addEventListener('click', closeMenu);
 
   function toggleMenu() {
     mobileMenu.classList.toggle('menu-active');
+  }
+  function closeMenu() {
+    mobileMenu.classList.remove('menu-active');
   }
 })();
