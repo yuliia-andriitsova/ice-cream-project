@@ -1,6 +1,8 @@
 .hero {
   position: relative;
   background-color: getColor('bg-clr2');
+  z-index: 1;
+  overflow-x: hidden;
 
   // @include phone {
   //   padding-top: 8px;
@@ -231,10 +233,6 @@
 //bg images positioning
 
 .hero > div {
-  position: relative;
-  overflow-x: hidden;
-  z-index: 1;
-
   @include phone {
     padding-top: 8px;
   }
@@ -275,7 +273,7 @@
   }
 
   @include desktop {
-    left: 40%;
+    left: 43%;
     bottom: 77px;
 
     width: 534px;
@@ -305,12 +303,14 @@
   }
 
   @include desktop {
-    right: 33%;
+    right: 29%;
 
     width: 236px;
     height: 557px;
   }
 }
+
+//hero bottom part
 
 .hero__text {
   font-family: 'DM Sans';
