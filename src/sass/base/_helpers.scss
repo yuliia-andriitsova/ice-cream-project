@@ -1,3 +1,7 @@
+body.modal-open {
+  overflow: hidden;
+}
+
 .hide {
   position: absolute;
 
@@ -32,7 +36,25 @@
   }
 
   @include desktop {
-    padding-left: 56px;
-    padding-right: 56px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@keyframes icecream {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150%);
   }
 }

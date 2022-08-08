@@ -288,14 +288,12 @@
   height: 100%;
   z-index: 2;
 }
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+
 
 .is-hidden.is-hidden--add {
   display: none;
 }
+
 
 .howitsmade-modal {
   position: absolute;
