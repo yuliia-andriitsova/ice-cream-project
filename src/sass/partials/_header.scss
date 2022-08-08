@@ -28,6 +28,15 @@
   }
 }
 
+.header__menu--icon {
+  fill: getColor('font-clr2');
+
+  &:hover,
+  &:focus {
+    fill: getColor('main-clr');
+  }
+}
+
 .header__container > .nav__button--tablet {
   display: none;
 

@@ -100,11 +100,13 @@
 
   const hdr = {
     openModalHdr: document.querySelector('[data-hdr-open]'),
+    openModalHdrMob: document.querySelector('[data-hdr-mob-open]'),
     closeModalHdr: document.querySelector('[data-hdr-close]'),
     modalHdr: document.querySelector('[data-hdr-modal]'),
   };
 
   hdr.openModalHdr.addEventListener('click', toggleModal);
+  hdr.openModalHdrMob.addEventListener('click', toggleModal);
   hdr.closeModalHdr.addEventListener('click', toggleModal);
 
   function toggleModal() {
