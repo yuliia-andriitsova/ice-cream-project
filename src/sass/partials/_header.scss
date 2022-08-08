@@ -54,8 +54,8 @@
     background-color: getColor('bg-clr1');
     opacity: 0.4;
 
-    transform: scaleX(0);
-    // transform: translateX(100%);
+    // transform: scaleX(0);
+    transform: translateX(100%);
     transform-origin: right;
     transition: transform 250ms linear, opacity 250ms linear;
   }
@@ -71,8 +71,8 @@
 
 .menu-active {
   @include toDesktop {
-    transform: scaleX(100%);
-    // transform: translateX(0);
+    // transform: scaleX(100%);
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -86,12 +86,26 @@
 .nav__button {
   @include button-white(48.64px);
 
+  .nav__button--arrow {
+    padding-top: 5px;
+
+    height: 14px;
+    width: 14px;
+    fill: getColor('main-clr');
+    transition: fill 250ms linear;
+  }
+
+  &:hover .nav__button--arrow,
+  &:focus .nav__button--arrow {
+    fill: getColor('font-clr2');
+  }
+
   @include toDesktop {
     padding-left: 62px;
     margin: 26px auto 0;
 
     .nav__button--arrow {
-      margin-left: 25px;
+      margin-left: 20px;
     }
   }
   @include tablet {
@@ -107,6 +121,15 @@
 
   @include desktop {
     margin-left: auto;
+
+    .nav__button--arrow {
+      margin-left: 13px;
+
+      &:hover,
+      &:focus {
+        fill: getColor('font-clr2');
+      }
+    }
   }
 }
 
@@ -124,6 +147,11 @@
 }
 
 .nav__link {
+  &:hover,
+  &:focus {
+    color: getColor('main-clr');
+  }
+
   @include toDesktop {
     display: block;
     padding-top: 11px;
@@ -145,11 +173,6 @@
 
     padding-top: 14px;
     padding-bottom: 14px;
-
-    &:hover,
-    &:focus {
-      color: getColor('main-clr');
-    }
   }
 }
 

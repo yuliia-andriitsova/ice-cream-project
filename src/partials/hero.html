@@ -2,6 +2,7 @@
     <div class="container">
 
         <section class="header">
+            <h3 class="hide">Main header</h3>
             <div class="header__container">
 
                 <a class="header__icon" href="#home">
@@ -14,8 +15,10 @@
                         <use class="header__menu--icon" href="/src/images/icons.svg#icon-burger-1"></use>
                     </svg>
                 </button>
-                <button class="nav__button nav__button--tablet" type="button">Buy now <img class="nav__button--arrow"
-                        src="/src/images/right-arrow.svg">
+                <button class="nav__button nav__button--tablet" type="button">Buy now<svg class="nav__button--arrow"
+                        aria-label="arrow">
+                        <use href="/src/images/icons.svg#icon-arrow-r"></use>
+                    </svg>
                 </button>
             </div>
             <div class="nav__menu" data-mobile-menu>
@@ -24,12 +27,13 @@
                         <use class="header__menu--icon" href="/src/images/icons.svg#icon-close-1"></use>
                     </svg>
                 </button>
-                <button class="nav__button" type="button">Buy now <img class="nav__button--arrow"
-                        src="/src/images/right-arrow.svg">
+                <button class="nav__button" type="button">Buy now<svg class="nav__button--arrow" aria-label="arrow">
+                        <use href="/src/images/icons.svg#icon-arrow-r"></use>
+                    </svg>
                 </button>
                 <nav class="nav__list">
-                    <ul>
-                        <li><a class="nav__link nav__link--active" href="#home">Home</a></li>
+                    <ul data-mobile-close>
+                        <li><a class="nav__link" href="#home">Home</a></li>
                         <li><a class="nav__link" href="#about">About us</a></li>
                         <li><a class="nav__link" href="#howitsmade">How it's made?</a></li>
                         <li><a class="nav__link" href="#products">Our products</a></li>
@@ -57,14 +61,14 @@
 
         </div>
 
-        <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        <!-- <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et</p>
         <div class="hero__milk"></div>
         <div class="hero__tasty"></div>
 
         <a href="#">
             <img src="./images/arrow-right1x.png" alt="arrow-right" class="hero__button" />
-        </a>
+        </a> -->
 
 
 
