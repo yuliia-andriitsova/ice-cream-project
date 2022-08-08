@@ -327,7 +327,7 @@
     line-height: 150%;
 
     left: 184px;
-    top: 188px;
+    top: 287px;
   }
   @include desktop {
     width: 200px;
@@ -352,8 +352,8 @@
     background-size: 152px 154px;
     width: 152px;
     height: 154px;
-    left: 32px;
-    top: 146px;
+    left: 0;
+    top: 115%;
 
     @include bg-adapt {
       background-image: url(../images/header-hero_png/milk2x-1_768.png);
@@ -388,8 +388,8 @@
     background-repeat: no-repeat;
     width: 190px;
     height: 150px;
-    right: 0%;
-    top: 131%;
+    right: -2%;
+    top: 132%;
     @include bg-adapt {
       background-image: url(../images/header-hero_png/tasty2x_768.png);
     }
@@ -412,6 +412,16 @@
   border: transparent;
   border-radius: 50%;
   position: absolute;
+
+  &:hover .products__svg,
+  &:focus .products__svg {
+    fill: #ffffff;
+  }
+  &:hover,
+  &:focus {
+    background-color: #d41443;
+  }
+
   @include phone {
     display: none;
   }
@@ -419,8 +429,8 @@
     width: 18px;
     height: 18px;
 
+    top: 342px;
     left: 184px;
-    top: 240px;
   }
   @include desktop {
     width: 26px;
