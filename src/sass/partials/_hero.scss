@@ -59,6 +59,7 @@
   }
   @include tablet {
     margin-top: 10px;
+    position: relative;
   }
   @include desktop {
     margin-top: $dist60;
@@ -204,4 +205,112 @@
 .hero__list .hero__item:last-child .hero__link {
   background-color: white;
   color: getColor('main-clr');
+}
+
+.hero__text {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+
+  @include phone {
+    display: none;
+  }
+  @include tablet {
+    width: 114px;
+    height: 48px;
+    font-size: 8px;
+    line-height: 150%;
+
+    left: 184px;
+    top: 188px;
+  }
+  @include desktop {
+    width: 200px;
+    height: 78px;
+    font-size: 14px;
+    line-height: 140%;
+
+    left: 229px;
+    top: 290px;
+  }
+}
+.hero__milk {
+  position: absolute;
+
+  @include phone {
+    display: none;
+  }
+  @include tablet {
+    background-image: url(../images/header-hero_png/milk1x_768.png),
+      url(../images/header-hero_png/milk2x_768.png);
+
+    background-repeat: no-repeat;
+    width: 152px;
+    height: 154px;
+    left: 32px;
+    top: 146px;
+  }
+
+  @include desktop {
+    background-image: url(../images/header-hero_png/milk1x_1200.png),
+      url(../images/header-hero_png/milk2x_1200.png);
+
+    background-repeat: no-repeat;
+    width: 213px;
+    height: 216px;
+    left: 15px;
+    top: 233px;
+  }
+}
+
+.hero__tasty {
+  position: absolute;
+
+  @include phone {
+    display: none;
+  }
+  @include tablet {
+    background-image: url(../images/header-hero_png/tasty1x_768.png),
+      url(../images/header-hero_png/tasty2x_768.png);
+
+    background-repeat: no-repeat;
+    width: 190px;
+    height: 150px;
+    right: 0%;
+    top: 131%;
+  }
+
+  @include desktop {
+    background-image: url(../images/header-hero_png/tasty1x_1200.png),
+      url(../images/header-hero_png/tasty2x_1200.png);
+
+    background-repeat: no-repeat;
+    width: 304px;
+    height: 241px;
+    right: 0%;
+    top: 137%;
+  }
+}
+.hero__button {
+  border: transparent;
+  border-radius: 50%;
+  position: absolute;
+  @include phone {
+    display: none;
+  }
+  @include tablet {
+    width: 18px;
+    height: 18px;
+
+    left: 184px;
+    top: 240px;
+  }
+  @include desktop {
+    width: 26px;
+    height: 26px;
+
+    left: 229px;
+    top: 373px;
+  }
 }
