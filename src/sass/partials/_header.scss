@@ -16,9 +16,24 @@
     margin-left: auto;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
   }
   @include desktop {
     display: none;
+  }
+}
+
+.header__menu--icon {
+  fill: getColor('font-clr2');
+
+  &:hover,
+  &:focus {
+    fill: getColor('main-clr');
   }
 }
 
