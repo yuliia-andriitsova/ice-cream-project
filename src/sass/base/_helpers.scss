@@ -36,3 +36,21 @@
     padding-right: 16px;
   }
 }
+
+@keyframes icecream {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
