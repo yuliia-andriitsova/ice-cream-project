@@ -4,6 +4,24 @@
     <h2 class="products__title">products</h2>
     <ul class="products__item">
       <li class="products__list products__list--backping">
+        <div class="backdrop-ice-cream is-hidden" data-prod-one-mod>
+          <button
+            type="button"
+            class="ice-cream-b modal-close"
+            data-prod-one-close
+          >
+            <svg class="ice-cream-icon" width="11" height="11">
+              <use href="./images/icons.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+          <div class="ice-cream-modal">
+            <button class="ice-cream-button" type="button">
+              <svg>
+                <use href="/src/images/icons.svg#icon-buy-buying"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
         <div class="products__icecream">
           <picture>
             <source
@@ -11,7 +29,7 @@
                 /src/images/products_png/ice-cream1x_1200.png 1x,
                 /src/images/products_png/ice-cream2x_1200.png 2x
               "
-              media="(min-width:1280px)"
+              media="(min-width:1200px)"
             />
             <source
               srcset="
@@ -41,30 +59,32 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
           </p>
-          <button class="products__button" type="button" data-prod-one-open>
+          <button
+            class="products__button modal-open"
+            type="button"
+            data-prod-one-open
+          >
             <svg class="products__svg" width="15" height="10">
               <use href="/src/images/icons.svg#icon-arrow-right2"></use>
             </svg>
           </button>
         </div>
-        <div class="backdrop is-hidden" data-prod-one-mod>
-          <div class="ice-cream-modal">
-            <button
-              type="button"
-              class="ice-cream-modal-close"
-              data-prod-one-close
-            >
-              <svg class="ice-cream-modal-close-icon">
-                <use href="./images/icons.svg#icon-close-btn"></use>
-              </svg>
-            </button>
-            <button class="ice-cream-button" type="button">
-              <a class="ice-cream-link" href="#">buy now</a>
-            </button>
-          </div>
-        </div>
       </li>
       <li class="products__list products__list--backcapuchino">
+        <div class="backdrop-ice-coffee is-hidden" data-prod-two-mod>
+          <button
+            type="button"
+            class="ice-coffee-b modal-close"
+            data-prod-two-close
+          >
+            <svg class="ice-coffee-icon" width="11" height="11">
+              <use href="/src/images/icons.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+          <div class="ice-coffee-modal">
+            <button class="ice-coffee-button" type="button">buy now</button>
+          </div>
+        </div>
         <div class="products__icecream">
           <picture>
             <source
@@ -72,7 +92,7 @@
                 /src/images/products_png/ice-coffee1x_1200.png 1x,
                 /src/images/products_png/ice-coffee2x_1200.png 2x
               "
-              media="(min-width: 1280px)"
+              media="(min-width: 1200px)"
             />
             <source
               srcset="
@@ -103,30 +123,32 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
           </p>
-          <button class="products__button" type="button" data-prod-one-open>
+          <button
+            class="products__button modal-open"
+            type="button"
+            data-prod-two-open
+          >
             <svg class="products__svg" width="15" height="10">
               <use href="/src/images/icons.svg#icon-arrow-right2"></use>
             </svg>
           </button>
         </div>
-        <div class="backdrop is-hidden" data-prod-one-mod>
-          <div class="ice-coffee-modal">
-            <button
-              type="button"
-              class="ice-coffee-modal-close"
-              data-prod-one-close
-            >
-              <svg class="ice-coffee-modal-close-icon">
-                <use href="./images/icons.svg#icon-close-btn"></use>
-              </svg>
-            </button>
-            <button class="ice-coffee-button" type="button">
-              <a class="ice-coffee-link" href="#">buy now</a>
-            </button>
-          </div>
-        </div>
       </li>
       <li class="products__list products__list--backgreen">
+        <div class="backdrop-milkshakes is-hidden" data-prod-three-mod>
+          <button
+            type="button"
+            class="milkshakes-b modal-close"
+            data-prod-three-close
+          >
+            <svg class="milkshakes-icon" width="11" height="11">
+              <use href="/src/images/icons.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+          <div class="milkshakes-modal">
+            <button class="milkshakes-button" type="button">buy now</button>
+          </div>
+        </div>
         <div class="products__icecream">
           <picture>
             <source
@@ -134,7 +156,7 @@
                 /src/images/products_png/milkshakes1x_1200.png 1x,
                 /src/images/products_png/milkshakes2x_1200.png 2x
               "
-              media="(min-width:1280px)"
+              media="(min-width:1200px)"
             />
             <source
               srcset="
@@ -164,27 +186,15 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
           </p>
-          <button class="products__button" type="button" data-prod-one-open>
+          <button
+            class="products__button modal-open"
+            type="button"
+            data-prod-three-open
+          >
             <svg class="products__svg" width="15" height="10">
               <use href="/src/images/icons.svg#icon-arrow-right2"></use>
             </svg>
           </button>
-        </div>
-        <div class="backdrop is-hidden" data-prod-one-mod>
-          <div class="milkshakes-modal">
-            <button
-              type="button"
-              class="milkshakes-modal-close"
-              data-prod-one-close
-            >
-              <svg class="milkshakes-modal-close-icon">
-                <use href="./images/icons.svg#icon-close-btn"></use>
-              </svg>
-            </button>
-            <button class="milkshakes-button" type="button">
-              <a class="milkshakes-link" href="#">buy now</a>
-            </button>
-          </div>
         </div>
       </li>
     </ul>

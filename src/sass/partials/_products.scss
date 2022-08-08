@@ -82,24 +82,24 @@
   @media screen and(min-width:1200px) {
     margin-top: 0;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1200px;
     height: 535px;
   }
 
 }
 
 .products__list--backping {
-  position: relative;
+  transform: scale(1);
   background-color: #FFB8CA;
 }
 
 .products__list--backcapuchino {
-  position: relative;
+  
   background-color: #F0D1A5;
 }
 
 .products__list--backgreen {
-  position: relative;
+  
   background-color: #C2E297;
 }
 
@@ -110,6 +110,8 @@
   top: -140px;
   left: 0;
   right: 0;
+transform: scale(1);
+  transition: transform 250ms linear;
 
   @media screen and(min-width:1200px) {
     top: -261px;
@@ -180,6 +182,7 @@ height: 40px;
   border: transparent;
   border-radius: 50%;
 }
+
 .products__svg {
   fill: #D41443;
 }
@@ -189,12 +192,26 @@ height: 40px;
 .products__button:hover  {
   background-color: #D41443;
 }
+.backdrop-ice-cream {
+position:absolute;
+background-color: rgba(255, 184, 202, 0.604);
+width: 100%;
+height: 100%;
+border-radius: 24px;
+z-index: 3;
+transition: opacity 250ms var(--timing-function);
+}
+.ice-cream-button{
+  background-color: transparent;
+  border: transparent
+  ;
+}
 .ice-cream-modal{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffb8ca;
+  background-color: rgb(255, 184, 201, 0);
   @media screen and (min-width: 480px) {
     max-width: 480px;
 
@@ -203,9 +220,33 @@ height: 40px;
     }
   }
 }
+
+.ice-cream-b ,.ice-coffee-b{
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: #cfcfcf;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.backdrop-ice-coffee{
+  position:absolute;
+  background-color: rgba(240, 209, 165, 0.601);
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  z-index: 3;
+  transition: opacity 250ms var(--timing-function);
+
+}
 .ice-coffee-modal{
   position: absolute;
-  background-color:#F0D1A5 ;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -217,8 +258,31 @@ height: 40px;
     }
   }
 }
+.ice-coffee-button{
+  font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  
+    color: #D41443;
+}
+.backdrop-milkshakes{
+  position:absolute;
+  background-color: rgba(193, 226, 151, 0.608);
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  z-index: 3;
+  transition: opacity 250ms var(--timing-function);
+
+}
 .milkshakes-modal{
-background-color: #C2E297;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -232,3 +296,31 @@ background-color: #C2E297;
     }
   }
 }
+.milkshakes-button{
+  
+  font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    background-color: transparent;
+    border: transparent;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  
+    color: #D41443;
+}
+.milkshakes-b {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: #cfcfcf;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);}
