@@ -2,7 +2,7 @@
   width: 100%;
   margin-top: 60px;
   margin-bottom: 60px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .products__pre-title {
@@ -14,16 +14,14 @@
   line-height: 1.66;
   text-align: center;
   text-transform: uppercase;
-  color: #FFA5BA;
+  color: #ffa5ba;
 
   @media screen and(min-width:768px) {
     font-size: 26px;
-
   }
 
   @media screen and(min-width:1200px) {
     font-size: 30px;
-
   }
 }
 
@@ -37,7 +35,7 @@
   margin-bottom: 140px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #D41443;
+  color: #d41443;
 
   @media screen and(min-width:768px) {
     margin-bottom: 158px;
@@ -85,41 +83,43 @@
     max-width: 1200px;
     height: 535px;
   }
-
 }
 .products__list.products__list--backping::before {
-  @include phone{
+  @include phone {
     content: '';
     position: absolute;
+    top: -140px;
     background-image: url(/src/images/products_png/ice-cream1x_320.png);
-left: 50%;
-  transform: translateX(-50%);
-      top: -140px;
-    
+
+
+    left: 50%;
+    transform: translateX(-50%);
+
+
     background-size: 280px 280px;
     background-repeat: no-repeat;
     width: 280px;
     height: 280px;
     @include bg-adapt {
-        background-image: url(/src/images/products_png/ice-cream2x_320.png);
-      }
+      background-image: url(/src/images/products_png/ice-cream2x_320.png);
+    }
   }
-
 
   @include tablet {
     content: '';
     position: absolute;
 
     background-image: url(/src/images/products_png/ice-cream1x_768.png);
+
 left: 50%;
   transform: translateX(-50%);
         top: -140px;
       
+
     background-size: 224px 224px;
     background-repeat: no-repeat;
     width: 224px;
     height: 224px;
-    
 
     @include bg-adapt {
       background-image: url(/src/images/products_png/ice-cream2x_768.png);
@@ -131,8 +131,10 @@ left: 50%;
     position: absolute;
 
     background-image: url(/src/images/products_png/ice-cream1x_1200.png);
+
   left: 50%;
     transform: translateX(-50%);
+
     top: -261px;
     background-size: 368px 394px;
     background-repeat: no-repeat;
@@ -148,10 +150,12 @@ left: 50%;
     content: '';
     position: absolute;
     background-image: url(/src/images/products_png/ice-coffee1x_320.png);
+
 left: 50%;
   transform: translateX(-50%);
       top: -140px;
      
+
     background-size: 280px 280px;
     background-repeat: no-repeat;
     width: 280px;
@@ -162,21 +166,21 @@ left: 50%;
     }
   }
 
-
   @include tablet {
     content: '';
     position: absolute;
 
     background-image: url(/src/images/products_png/ice-coffee1x_768.png);
+
   left: 50%;
     transform: translateX(-50%);
       top: -140px;
      
+
     background-size: 224px 224px;
     background-repeat: no-repeat;
     width: 224px;
     height: 224px;
-
 
     @include bg-adapt {
       background-image: url(/src/images/products_png/ice-coffee2x_768.png);
@@ -188,9 +192,11 @@ left: 50%;
     position: absolute;
 
     background-image: url(/src/images/products_png/ice-coffee1x_1200.png);
+
   left: 50%;
     transform: translateX(-50%);
       top: -261px;
+
     background-size: 368px 394px;
     background-repeat: no-repeat;
     width: 368px;
@@ -206,6 +212,7 @@ left: 50%;
     content: '';
     position: absolute;
     background-image: url(/src/images/products_png/milkshakes1x_320.png);
+
   left: 50%;
     transform: translateX(-50%);
       top: -140px;
@@ -220,12 +227,12 @@ left: 50%;
     }
   }
 
-
   @include tablet {
     content: '';
     position: absolute;
 
     background-image: url(/src/images/products_png/milkshakes1x_768.png);
+
   left: 50%;
     transform: translateX(-50%);
       top: -140px;
@@ -234,7 +241,6 @@ left: 50%;
     background-repeat: no-repeat;
     width: 224px;
     height: 224px;
-
 
     @include bg-adapt {
       background-image: url(/src/images/products_png/milkshakes2x_768.png);
@@ -246,10 +252,12 @@ left: 50%;
     position: absolute;
 
     background-image: url(/src/images/products_png/milkshakes1x_1200.png);
+
   left: 50%;
     transform: translateX(-50%);
       top: -261px;
       background-size: 368px 394px;
+
     background-size: 368px 394px;
     background-repeat: no-repeat;
     width: 368px;
@@ -263,19 +271,16 @@ left: 50%;
 
 .products__list--backping {
   transform: scale(1);
-  background-color: #FFB8CA;
+  background-color: #ffb8ca;
 }
 
 .products__list--backcapuchino {
-  
-  background-color: #F0D1A5;
+  background-color: #f0d1a5;
 }
 
 .products__list--backgreen {
-  
-  background-color: #C2E297;
+  background-color: #c2e297;
 }
-
 
 .products__confim {
   padding-top: 165px;
@@ -299,24 +304,23 @@ left: 50%;
   line-height: 1.13px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-bottom: 70px;
 }
-.products__nameice::after{
-content: '';
-position: absolute;
-background-image: url(/src/images/products_png/Group_products.svg);
-width: 26px;
-height: 6px;
-top: 65%;
-left: 50%;
-transform: translate(-50%, -50%);
+.products__nameice::after {
+  content: '';
+  position: absolute;
+  background-image: url(/src/images/products_png/Group_products.svg);
+  width: 26px;
+  height: 6px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 .products__points {
   display: block;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-bottom: 32px;
 }
 
@@ -331,52 +335,52 @@ transform: translate(-50%, -50%);
   font-size: 16px;
   line-height: 1.76;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .products__button {
-width: 40px;
-height: 40px;
+  width: 40px;
+  height: 40px;
   margin-top: 32px;
   border: transparent;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .products__svg {
-  fill: #D41443;
+  fill: #d41443;
 }
-.products__button:hover .products__svg{
-  fill:#FFFFFF;
+.products__button:hover .products__svg {
+  fill: #ffffff;
 }
-.products__button:hover  {
-  background-color: #D41443;
+.products__button:hover {
+  background-color: #d41443;
 }
 .backdrop-ice-cream {
-position:absolute;
-background-color: rgba(255, 184, 202, 0.604);
-width: 100%;
-height: 100%;
-border-radius: 24px;
-z-index: 3;
-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  position: absolute;
+  background-color: rgba(255, 184, 202, 0.604);
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  z-index: 3;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-.ice-cream-button{
+.ice-cream-button {
   font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 55px;
-    background-color: transparent;
-    border: transparent;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #D41443;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  background-color: transparent;
+  border: transparent;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #d41443;
 }
-.ice-cream-modal{
+.ice-cream-modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -391,7 +395,8 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   }
 }
 
-.ice-cream-b ,.ice-coffee-b{
+.ice-cream-b,
+.ice-coffee-b {
   cursor: pointer;
   position: absolute;
   right: 10px;
@@ -403,56 +408,54 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-  0px 2px 1px rgba(0, 0, 0, 0.2);
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.backdrop-ice-coffee{
-  position:absolute;
+.backdrop-ice-coffee {
+  position: absolute;
   background-color: rgba(240, 209, 165, 0.601);
   width: 100%;
   height: 100%;
   border-radius: 24px;
   z-index: 3;
-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-.ice-coffee-modal{
+.ice-coffee-modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   @media screen and (min-width: 480px) {
-  max-width: 480px;
+    max-width: 480px;
     @media screen and (min-width: 320px) and (max-width: 479px) {
       width: 100%;
     }
   }
 }
-.ice-coffee-button{
+.ice-coffee-button {
   font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 55px;
-    background-color: transparent;
-    border: transparent;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  background-color: transparent;
+  border: transparent;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   cursor: pointer;
-    color: #D41443;
+  color: #d41443;
 }
-.backdrop-milkshakes{
-  position:absolute;
+.backdrop-milkshakes {
+  position: absolute;
   background-color: rgba(193, 226, 151, 0.608);
   width: 100%;
   height: 100%;
   border-radius: 24px;
   z-index: 3;
-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-.milkshakes-modal{
+.milkshakes-modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -466,20 +469,19 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     }
   }
 }
-.milkshakes-button{
+.milkshakes-button {
   font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 55px;
-    background-color: transparent;
-    border: transparent;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #D41443;
-    
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  background-color: transparent;
+  border: transparent;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #d41443;
 }
 .milkshakes-b {
   cursor: pointer;
@@ -493,4 +495,5 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);}
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}

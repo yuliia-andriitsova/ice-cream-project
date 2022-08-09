@@ -2,9 +2,9 @@ body.modal-open {
   overflow: hidden;
 }
 
-.open-menu {
-  overflow-x: hidden;
-}
+// .header.open-menu {
+//   overflow-x: initial;
+// }
 
 .hide {
   position: absolute;
@@ -37,11 +37,13 @@ body.modal-open {
   @include tablet {
     padding-left: $dist32;
     padding-right: $dist32;
+    width: 768px;
   }
 
   @include desktop {
     padding-left: 16px;
     padding-right: 16px;
+    width: 1200px;
   }
 }
 

@@ -57,18 +57,22 @@
 }
 
 .hero__container {
+  position: relative;
   display: flex;
 
   @include phone {
-    padding-top: 136px;
+    padding-top: 194px;
     padding-bottom: 158px;
   }
+
   @include tablet {
-    margin-top: 10px;
-    // position: relative;
+    padding-top: 92px;
+    padding-bottom: 190px;
   }
+
   @include desktop {
-    margin-top: $dist60;
+    padding-top: 147px;
+    padding-bottom: 316px;
   }
 }
 
@@ -232,22 +236,6 @@
 
 //bg images positioning
 
-.hero > div {
-  @include phone {
-    padding-top: 8px;
-  }
-
-  @include tablet {
-    padding-top: $dist32;
-    padding-bottom: 190px;
-  }
-
-  @include desktop {
-    padding-top: $dist40;
-    padding-bottom: 316px;
-  }
-}
-
 .hero__circle {
   position: absolute;
 
@@ -340,7 +328,7 @@
     top: 456px;
   }
 }
-.hero::before {
+.hero__container::before {
   animation: icecream 500ms ease-out;
   @include tablet {
     content: '';
@@ -377,7 +365,7 @@
   }
 }
 
-.hero::after {
+.hero__container::after {
   animation: circle 500ms linear;
   animation-direction: reverse;
 
@@ -451,8 +439,4 @@
     left: 229px;
     top: 554px;
   }
-}
-
-.hide-menu {
-  overflow: hidden;
 }

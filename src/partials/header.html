@@ -1,39 +1,44 @@
-<section class="header">
-    <div class="header__container container">
+<section class="header ">
+    <div class="container">
+        <h3 class="hide">Main header</h3>
+        <div class="header__container">
 
-        <div class="header__icon">
-            <img srcset="/src/images/logo_1x.png 1x, /src/images/logo_2x.png 2x" src="/src/images/logo_1x.png"
-                alt="Logo">
+            <a class="header__icon" href="#home">
+                <img srcset="/src/images/logo_1x.png 1x, /src/images/logo_2x.png 2x" src="/src/images/logo_1x.png"
+                    alt="Logo">
+            </a>
+
+            <button type="button" class="header__menu" data-menu-open>
+                <svg width="20" height="12" aria-label="mobile menu">
+                    <use href="/src/images/icons.svg#icon-burger-1"></use>
+                </svg>
+            </button>
+            <button class="nav__button nav__button--tablet" type="button" data-hdr-open>Buy now<svg
+                    class="nav__button--arrow" aria-label="arrow">
+                    <use href="/src/images/icons.svg#icon-arrow-r"></use>
+                </svg>
+            </button>
         </div>
-
-        <button type="button" class="header__menu" data-menu-open>
-            <svg width="20" height="12" aria-label="mobile menu">
-                <use class="header__menu--icon" href="/src/images/icons.svg#icon-burger-1"></use>
-            </svg>
-        </button>
-
-    </div>
-    <div class="nav__menu" data-mobile-menu>
-        <button type="button" class="header__menu header__nav" data-menu-close>
-            <svg width="20" height="12" aria-label="mobile menu">
-                <use class="header__menu--icon" href="/src/images/icons.svg#icon-close-1"></use>
-            </svg>
-        </button>
-        <button class="nav__button" type="button">Buy now<svg aria-label="arrow" data-hdr-open>
-                <use class="nav__button--arrow" href="/src/images/icons.svg#icon-right-arrow"></use>
-            </svg></button>
-        <nav class="nav__list">
-            <ul>
-                <li><a class="nav__link nav__link--active" href="#">Home</a></li>
-                <li><a class="nav__link" href="#">About us</a></li>
-                <li><a class="nav__link" href="#">How it's made?</a></li>
-                <li><a class="nav__link" href="#">Our products</a></li>
-                <li><a class="nav__link" href="#">Contacts</a></li>
-            </ul>
-        </nav>
-    </div>
+        <div class="nav__menu" data-mobile-menu>
+            <button type="button" class="header__menu header__nav" data-menu-close>
+                <svg class="header__menu--icon" width="20" height="20" aria-label="mobile menu">
+                    <use href="/src/images/icons.svg#icon-close-btn"></use>
+                </svg>
+            </button>
+            <button class="nav__button" type="button" data-hdr-mob-open>Buy now<svg class="nav__button--arrow"
+                    aria-label="arrow">
+                    <use href="/src/images/icons.svg#icon-arrow-r"></use>
+                </svg>
+            </button>
+            <nav class="nav__list">
+                <ul data-mobile-close>
+                    <li><a class="nav__link" href="#home">Home</a></li>
+                    <li><a class="nav__link" href="#about">About us</a></li>
+                    <li><a class="nav__link" href="#howitsmade">How it's made?</a></li>
+                    <li><a class="nav__link" href="#products">Our products</a></li>
+                    <li><a class="nav__link" href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </section>
-
-<!-- <img class="nav__button--arrow"
-                src="/src/images/right-arrow.svg"> -->

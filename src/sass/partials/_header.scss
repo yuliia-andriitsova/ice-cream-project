@@ -1,4 +1,24 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+
+  width: 100%;
+}
+
+.header > div {
+  @include phone {
+    padding-top: 8px;
+  }
+  @include tablet {
+    padding-top: 32px;
+  }
+  @include desktop {
+    padding-top: 37px;
+  }
+
   @include desktop {
     display: flex;
   }
@@ -69,10 +89,10 @@
     background-color: getColor('bg-clr1');
     opacity: 0.4;
 
-    // transform: scaleX(0);
+    transform: scaleX(0);
     transform: translateX(100%);
     transform-origin: right;
-    transition: transform 250ms linear, opacity 250ms linear;
+    transition: transform 250ms linear, opacity 250ms linear, scale 250ms linear;
   }
 
   @include desktop {
@@ -86,7 +106,7 @@
 
 .menu-active {
   @include toDesktop {
-    // transform: scaleX(100%);
+    transform: scaleX(100%);
     transform: translateX(0);
     opacity: 1;
   }
@@ -124,7 +144,6 @@
     }
   }
   @include tablet {
-    // margin-top: 24px;
     margin-top: 24px;
     padding-left: 54px;
     padding-right: 54px;
