@@ -23,6 +23,12 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 375px;
+  }
 }
 
 .footer-name {
@@ -131,3 +137,4 @@ letter-spacing: 0.06em;
       justify-content: center;
     }
 }
+
