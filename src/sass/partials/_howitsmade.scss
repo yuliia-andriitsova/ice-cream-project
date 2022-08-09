@@ -2,17 +2,15 @@
   background-color: getColor('bg-clr6');
   @media screen and (min-width: 0px) and (max-width: 767px) {
     padding-top: $dist60;
-    padding-bottom: 60px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding-top: $dist60;
-    padding-bottom: 64px;
   }
 
   @media screen and (min-width: 1200px) {
     padding-top: $dist60;
-    padding-bottom: 120px;
+    padding-bottom: 81px;
   }
 
   @media screen and (min-width: 0px) and (max-width: 767px) {
@@ -172,15 +170,15 @@
 .howitsmade__button {
   @include button-white(38);
   border: none;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 60px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 81px;
-  }
+  // @media screen and (min-width: 320px) and (max-width: 767px) {
+  //   margin-bottom: 40px;
+  // }
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   margin-bottom: 60px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   margin-bottom: 81px;
+  // }
 }
 
 .howitsmade__about {
@@ -196,7 +194,25 @@
   }
 }
 
-.howitsmade__list {
+.howitsmade-adv {
+  background-color: getColor('bg-clr6');
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    padding-bottom: 60px;
+    padding-top: 40px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 64px;
+    padding-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 120px;
+    padding-top: 40px;
+  }
+}
+
+.howitsmade-adv__list {
   @media screen and (min-width: 768px) {
     display: flex;
 
@@ -210,25 +226,89 @@
     }
   }
 
-  .howitsmade__items {
+  .howitsmade-adv__items {
     @media screen and (min-width: 320px) and (max-width: 479px) {
-      // width: 100%;
     }
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      // width: 230px;
-      // width: 72%;
     }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .howitsmade__items:not(:last-child) {
+  .howitsmade-adv__items:not(:last-child) {
     margin-bottom: 32px;
   }
 }
 
-.howitsmade__components--quantity {
+.howitsmade-adv__items.item-one::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 767px) {
+    background-image: url('/src/images/howitsmade-componetns/component1-320-1x.png');
+    @include bg-adapt {
+      background-image: url('/src/images/howitsmade-componetns/component1-320-2x.png');
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('/src/images/howitsmade-componetns/component1-768-1200-1x.png');
+    @include bg-adapt {
+      background-image: url('/src/images/howitsmade-componetns/component1-768-1200-2x.png');
+    }
+  }
+}
+
+.howitsmade-adv__items.item-two::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 767px) {
+    background-image: url('/src/images/howitsmade-componetns/component2-320-1x.png');
+    @include bg-adapt {
+      background-image: url('/src/images/howitsmade-componetns/component2-320-2x.png');
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('/src/images/howitsmade-componetns/component2-768-1200-1x.png');
+    @include bg-adapt {
+      background-image: url('/src/images/howitsmade-componetns/component2-768-1200-2x.png');
+    }
+  }
+}
+
+.howitsmade-adv__items.item-three::before {
+  content: '';
+  display: block;
+  // width: 50px;
+  // height: 50px;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 767px) {
+    background-image: url('/src/images/howitsmade-componetns/component3-320-1x.png');
+    @include bg-adapt {
+      background-image: url('/src/images/howitsmade-componetns/component3-320-2x.png');
+    }
+    background-size: 100px 100px;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('/src/images/howitsmade-componetns/component3-768-1200-1x.png');
+    @include bg-adapt {
+      background-image: url('/src/images/howitsmade-componetns/component3-768-1200-2x.png');
+    }
+  }
+}
+
+.howitsmade-adv__components--quantity {
   display: block;
   font-family: titan one, titan one;
   @include font-size(36, 400, 1.14, 0.04em);
@@ -253,7 +333,7 @@
   }
 }
 
-.howitsmade__text--bold {
+.howitsmade-adv__text--bold {
   font-family: DM Sans, sans-serif;
 
   @media screen and (min-width: 0px) and (max-width: 479px) {
