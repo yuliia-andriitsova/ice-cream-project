@@ -279,9 +279,14 @@
         <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                                <img class="swiper__face"
-                                        srcset="/src/images/feedback/girl_1_1x.png 1x, /src/images/feedback/girl_1_2x.png 2x"
-                                        src="/src/images/feedback/girl_1_1x.png" alt="girl one">
+                                <picture>
+                                        <source srcset="/src/images/feedback/girl_1_1x.webp 1x, /src/images/feedback/girl_1_2x.webp 2x"
+                                                type="image/webp">
+                                        <source srcset="/src/images/feedback/girl_1_1x.png 1x, /src/images/feedback/girl_1_2x.png 2x"
+                                                type="image/png">
+                                        <img class="swiper__face" src="/src/images/feedback/girl_1_1x.png"
+                                                alt="girl one" loading="lazy" aria-label="First Girl">
+                                </picture>
                                 <div class="swiper__thumb">
                                         <div class="swiper__container">
                                                 <p class="swiper__text">Nullam viverra consectetuer.
@@ -298,9 +303,14 @@
                                 <span class="swiper__name">Lilly, San Diego</span>
                         </div>
                         <div class="swiper-slide">
-                                <img class="swiper__face"
-                                        srcset="/src/images/feedback/girl_2_1x.png 1x, /src/images/feedback/girl_2_2x.png 2x"
-                                        src="/src/images/feedback/girl_2_1x.png" alt="girl two">
+                                <picture>
+                                        <source srcset="/src/images/feedback/girl_2_1x.webp 1x, /src/images/feedback/girl_2_2x.webp 2x"
+                                                type="image/webp">
+                                        <source srcset="/src/images/feedback/girl_2_1x.png 1x, /src/images/feedback/girl_2_2x.png 2x"
+                                                type="image/png">
+                                        <img class="swiper__face" src="/src/images/feedback/girl_2_1x.png"
+                                                alt="girl two" loading="lazy" aria-label="Second Girl">
+                                </picture>
                                 <div class="swiper__thumb">
                                         <div class="swiper__container">
                                                 <p class="swiper__text">Nullam viverra consectetuer.
@@ -314,15 +324,18 @@
                                                 </p>
                                         </div>
                                 </div>
-                                <!-- <svg class="swiper__dots" width="32px" height="4px">
-                                                <use href="/src/images/icons.svg#icon-dots"></use>
-                                        </svg> -->
                                 <span class="swiper__name">Kate, New York</span>
                         </div>
                         <div class="swiper-slide">
-                                <img class="swiper__face"
-                                        srcset="/src/images/feedback/girl_3_1x.png 1x, /src/images/feedback/girl_3_2x.png 2x"
-                                        src="/src/images/feedback/girl_3_1x.png" alt="girl three">
+                                <picture>
+                                        <source srcset="/src/images/feedback/girl_3_1x.webp 1x, /src/images/feedback/girl_3_2x.webp 2x"
+                                                type="image/webp">
+                                        <source srcset="/src/images/feedback/girl_3_1x.png 1x, /src/images/feedback/girl_3_2x.png 2x"
+                                                type="image/png">
+                                        <img class="swiper__face" src="/src/images/feedback/girl_3_1x.png"
+                                                alt="girl three" loading="lazy" aria-label="Third Girl">
+                                </picture>
+
                                 <div class="swiper__thumb">
                                         <div class="swiper__container">
                                                 <p class="swiper__text">Nullam viverra consectetuer.
@@ -336,9 +349,6 @@
                                                 </p>
                                         </div>
                                 </div>
-                                <!-- <svg class="swiper__dots" width="32px" height="4px">
-                                                <use href="/src/images/icons.svg#icon-dots"></use>
-                                        </svg> -->
                                 <span class="swiper__name">Emily, Los Angeles</span>
                         </div>
                 </div>

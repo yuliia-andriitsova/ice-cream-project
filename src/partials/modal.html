@@ -6,7 +6,13 @@
                 <use href="/src/images/icons.svg#icon-close-btn"></use>
             </svg>
         </button>
-        <img class="hdr__img" src="/src/images/icecream_splash.png" alt="Ice Cream Splash">
+        <picture>
+            <source srcset="/src/images/icecream_splash.webp" type="image/webp">
+            <source srcset="/src/images/icecream_splash.png" type="image/png">
+            <img class="hdr__img" src="/src/images/icecream_splash.png" alt="Ice Cream Splash" loading="lazy"
+                aria-label="Splash">
+        </picture>
+
         <div>
             <h3 class="hdr__title">Taste Milk Magic</h3>
             <div class="hdr__container">

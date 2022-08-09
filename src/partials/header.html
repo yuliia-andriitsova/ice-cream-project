@@ -4,8 +4,11 @@
         <div class="header__container">
 
             <a class="header__icon" href="#home">
-                <img srcset="/src/images/logo_1x.png 1x, /src/images/logo_2x.png 2x" src="/src/images/logo_1x.png"
-                    alt="Logo">
+                <picture>
+                    <source srcset=" /src/images/logo_1x.webp 1x, /src/images/logo_2x.webp 2x" type="image/webp">
+                    <source srcset=" /src/images/logo_1x.png 1x, /src/images/logo_2x.png 2x">
+                    <img src="/src/images/logo_1x.png" alt="Logo" loading="lazy" aria-label="Logo">
+                </picture>
             </a>
 
             <button type="button" class="header__menu" data-menu-open>
