@@ -20,7 +20,7 @@
   const menuCloseBtn = document.querySelector('[data-menu-close]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
   const mobileClose = document.querySelector('[data-mobile-close]');
-  // const heroHidden = document.querySelector('#home');
+  const heroHidden = document.querySelector('.header');
 
   menuOpenBtn.addEventListener('click', toggleMenu);
   menuCloseBtn.addEventListener('click', toggleMenu);
@@ -29,7 +29,7 @@
   function toggleMenu() {
     mobileMenu.classList.toggle('menu-active');
     // heroHidden.classList.toggle('hide-menu');
-    // heroHidden.classList.toggle('open-menu');
+    heroHidden.classList.toggle('open-menu');
   }
   function closeMenu() {
     mobileMenu.classList.remove('menu-active');

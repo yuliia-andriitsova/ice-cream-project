@@ -57,6 +57,7 @@
 }
 
 .hero__container {
+  position: relative;
   display: flex;
 
   @include phone {
@@ -327,7 +328,7 @@
     top: 456px;
   }
 }
-.hero::before {
+.hero__container::before {
   animation: icecream 500ms ease-out;
   @include tablet {
     content: '';
@@ -364,7 +365,7 @@
   }
 }
 
-.hero::after {
+.hero__container::after {
   animation: circle 500ms linear;
   animation-direction: reverse;
 
@@ -438,7 +439,3 @@
     top: 554px;
   }
 }
-
-// .hide-menu {
-//   overflow: hidden;
-// }
