@@ -17,7 +17,7 @@
     background-image: url('/src/images/How_its_made_png/milk-splash1x_320.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0px 45%;
+    background-position: 0px 100%;
     @include bg-adapt {
       background-image: url('/src/images/How_its_made_png/milk-splash2x_320.webp');
     }
@@ -27,7 +27,7 @@
     background-image: url('/src/images/How_its_made_png/milk-splash1x_1200.webp');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0px 38%;
+    background-position: 0px 100%;
     @include bg-adapt {
       background-image: url('/src/images/How_its_made_png/milk-splash2x_1200.webp');
     }
