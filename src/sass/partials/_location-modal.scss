@@ -7,6 +7,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
   padding: 40px 15px;
+  transition: all 250ms linear;
   }
   
   .location__modal {
@@ -15,6 +16,7 @@
     width: 100%;
     height: 100%;
     background-color:getColor('font-clr2');
+    transition: all 250ms linear;
   }
   
   iframe {
@@ -55,6 +57,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     overflow-y: scroll;
     padding: 40px 15px;
+    transition: all 250ms linear;
     @media screen and (min-width: 768px) {
       padding: 0;
     }
@@ -67,6 +70,7 @@
     border-radius: 4px;
     background-color: getColor('bg-clr6');
     box-shadow: 0px 4px 4px rgba(212, 20, 68, 0.281);
+    transition: all 250ms linear;
   
     @media screen and (min-width: 768px) {
       position: absolute;
@@ -105,6 +109,7 @@
     border: 1px solid rgba(212, 20, 68, 0.281);
     color: getColor('main-clr');
     background-color: transparent;
+    transition: all 250ms linear;
     cursor: pointer;
 
     &:hover,
@@ -186,6 +191,7 @@
     background-color: getColor('main-clr');
     border-radius: 22px;
     border: 1px solid transparent;
+    transition: all 250ms linear;
   
     cursor: pointer;
   
