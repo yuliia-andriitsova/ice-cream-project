@@ -116,4 +116,19 @@
     document.body.classList.toggle('modal-open');
     hdr.modalHdr.classList.toggle('is-hidden');
   }
+
+  //Modal hero
+
+  const hero = {
+    openModalHero: document.querySelector('[data-hero-open]'),
+    closeModalHero: document.querySelector('[data-hero-close]'),
+    modalHero: document.querySelector('[data-hero-modal]'),
+  };
+
+  hero.openModalHero.addEventListener('click', toggleModalHero);
+  hero.closeModalHero.addEventListener('click', toggleModalHero);
+
+  function toggleModalHero() {
+    hero.modalHero.classList.toggle('is-hidden');
+  }
 })();
