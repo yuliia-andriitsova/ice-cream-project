@@ -413,6 +413,7 @@
     background-image: url(../images/header-hero_png/tasty1x_1200.png);
     background-size: 304px 241px;
     background-repeat: no-repeat;
+    background-color: #fff;
 
     @include bg-adapt {
       background-image: url(../images/header-hero_png/tasty2x_1200.png);
