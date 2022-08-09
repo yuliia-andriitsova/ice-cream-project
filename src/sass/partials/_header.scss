@@ -5,9 +5,10 @@
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
-  margin: 0;
+  @include toDesktop {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__menu {
@@ -15,9 +16,24 @@
     margin-left: auto;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
   }
   @include desktop {
     display: none;
+  }
+}
+
+.header__menu--icon {
+  fill: getColor('font-clr2');
+
+  &:hover,
+  &:focus {
+    fill: getColor('main-clr');
   }
 }
 
@@ -53,8 +69,8 @@
     background-color: getColor('bg-clr1');
     opacity: 0.4;
 
-    transform: scaleX(0);
-    // transform: translateX(100%);
+    // transform: scaleX(0);
+    transform: translateX(100%);
     transform-origin: right;
     transition: transform 250ms linear, opacity 250ms linear;
   }
@@ -62,13 +78,16 @@
   @include desktop {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 128px;
+    width: 100%;
   }
 }
 
 .menu-active {
   @include toDesktop {
-    transform: scaleX(100%);
-    // transform: translateX(0);
+    // transform: scaleX(100%);
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -81,11 +100,28 @@
 
 .nav__button {
   @include button-white(48.64px);
-  padding-left: 62px;
-  margin: 26px auto 0;
 
   .nav__button--arrow {
-    margin-left: 25px;
+    padding-top: 5px;
+
+    height: 14px;
+    width: 14px;
+    fill: getColor('main-clr');
+    transition: fill 250ms linear;
+  }
+
+  &:hover .nav__button--arrow,
+  &:focus .nav__button--arrow {
+    fill: getColor('font-clr2');
+  }
+
+  @include toDesktop {
+    padding-left: 62px;
+    margin: 26px auto 0;
+
+    .nav__button--arrow {
+      margin-left: 20px;
+    }
   }
   @include tablet {
     // margin-top: 24px;
@@ -95,6 +131,19 @@
 
     .nav__button--arrow {
       margin-left: 21px;
+    }
+  }
+
+  @include desktop {
+    margin-left: auto;
+
+    .nav__button--arrow {
+      margin-left: 13px;
+
+      &:hover,
+      &:focus {
+        fill: getColor('font-clr2');
+      }
     }
   }
 }
@@ -107,11 +156,17 @@
   ul {
     @include desktop {
       display: flex;
+      gap: 35px;
     }
   }
 }
 
 .nav__link {
+  &:hover,
+  &:focus {
+    color: getColor('main-clr');
+  }
+
   @include toDesktop {
     display: block;
     padding-top: 11px;
@@ -125,6 +180,14 @@
     &:first-child {
       border-top: 1px solid getColor('acc-clr1');
     }
+  }
+
+  @include desktop {
+    @include font-size(16px, 700, calc(21 / 16));
+    color: getColor('font-clr2');
+
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }
 
