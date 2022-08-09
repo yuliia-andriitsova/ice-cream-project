@@ -1,0 +1,109 @@
+.backdrop__hero {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  //   opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opaciti 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  //   background-image: url(../images/header-hero_png/hero-mod.png);
+  //   background-size: 190px 150px;
+  //   background-repeat: no-repeat;
+}
+
+.hero__modal {
+  position: absolute;
+  background-color: getColor('bg-clr2');
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: none;
+
+  background-image: url(../images/header-hero_png/hero-mod.png);
+  background-size: 190px 150px;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @include phone {
+    display: none;
+  }
+
+  @include tablet {
+    position: fixed;
+    top: 45vh;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
+    padding: 32px;
+    width: 450px;
+  }
+
+  @include desktop {
+    position: fixed;
+    top: 74vh;
+    left: 54%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    padding: 40px;
+  }
+}
+
+.hero__btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+
+  background-color: transparent;
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: getColor(main-clr);
+  }
+}
+
+.hero__icon-close {
+  width: 20px;
+  height: 20px;
+  fill: getColor('main-clr');
+
+  &:hover,
+  &:focus {
+    fill: getColor(font-clr2);
+  }
+}
+// .hero__modal-icon {
+//   background-color: #ffb8ca;
+//   border-radius: 10px;
+//   max-width: 100%;
+//   max-height: 100%;
+// }
+
+.hero__modal-text {
+  font-family: $font-main;
+
+  text-transform: uppercase;
+  color: white;
+
+  @include phone {
+    display: none;
+  }
+
+  @include tablet {
+    width: 162px;
+    @include font-size(22px, 400, calc(25 / 22), 0.04em);
+  }
+
+  @include desktop {
+    width: 277px;
+    @include font-size(38px, 400, calc(44 / 38), 0.04em);
+  }
+}
