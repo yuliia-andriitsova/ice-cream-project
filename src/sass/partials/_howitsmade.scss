@@ -244,7 +244,6 @@
 .howitsmade-adv__items.item-one::before {
   content: '';
   display: block;
-  width: 50px;
   height: 50px;
   background-repeat: no-repeat;
 
@@ -252,6 +251,7 @@
     background-image: url('/src/images/howitsmade-componetns/component1-320-1x.png');
     @include bg-adapt {
       background-image: url('/src/images/howitsmade-componetns/component1-320-2x.png');
+      background-size: 33px 50px;
     }
   }
 
@@ -259,6 +259,7 @@
     background-image: url('/src/images/howitsmade-componetns/component1-768-1200-1x.png');
     @include bg-adapt {
       background-image: url('/src/images/howitsmade-componetns/component1-768-1200-2x.png');
+      background-size: 50px 50px;
     }
   }
 }
@@ -266,7 +267,6 @@
 .howitsmade-adv__items.item-two::before {
   content: '';
   display: block;
-  width: 50px;
   height: 50px;
   background-repeat: no-repeat;
 
@@ -274,6 +274,7 @@
     background-image: url('/src/images/howitsmade-componetns/component2-320-1x.png');
     @include bg-adapt {
       background-image: url('/src/images/howitsmade-componetns/component2-320-2x.png');
+      background-size: 50px 50px;
     }
   }
 
@@ -281,6 +282,7 @@
     background-image: url('/src/images/howitsmade-componetns/component2-768-1200-1x.png');
     @include bg-adapt {
       background-image: url('/src/images/howitsmade-componetns/component2-768-1200-2x.png');
+      background-size: 50px 50px;
     }
   }
 }
@@ -288,22 +290,23 @@
 .howitsmade-adv__items.item-three::before {
   content: '';
   display: block;
-  // width: 50px;
-  // height: 50px;
+  height: 50px;
   background-repeat: no-repeat;
 
   @media screen and (max-width: 767px) {
     background-image: url('/src/images/howitsmade-componetns/component3-320-1x.png');
+
     @include bg-adapt {
       background-image: url('/src/images/howitsmade-componetns/component3-320-2x.png');
+      background-size: 44px 50px;
     }
-    background-size: 100px 100px;
   }
 
   @media screen and (min-width: 768px) {
     background-image: url('/src/images/howitsmade-componetns/component3-768-1200-1x.png');
     @include bg-adapt {
       background-image: url('/src/images/howitsmade-componetns/component3-768-1200-2x.png');
+      background-size: 44px 50px;
     }
   }
 }
@@ -464,12 +467,3 @@
 .animate__animated.animate__heartBeat {
   --animate-duration: 3800ms;
 }
-
-// .animate__animated.animate__zoomIn {
-//   // --animate-duration: 2100ms;
-// }
-
-// .animate__animated.animate__backInLeft,
-// .animate__animated.animate__backInRight {
-//   // --animate-delay: 3.29s;
-// }

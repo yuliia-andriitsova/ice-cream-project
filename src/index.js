@@ -105,11 +105,11 @@
     modalHdr: document.querySelector('[data-hdr-modal]'),
   };
 
-  hdr.openModalHdr.addEventListener('click', toggleModal);
-  hdr.openModalHdrMob.addEventListener('click', toggleModal);
-  hdr.closeModalHdr.addEventListener('click', toggleModal);
+  hdr.openModalHdr.addEventListener('click', toggleModalHdr);
+  hdr.openModalHdrMob.addEventListener('click', toggleModalHdr);
+  hdr.closeModalHdr.addEventListener('click', toggleModalHdr);
 
-  function toggleModal() {
+  function toggleModalHdr() {
     document.body.classList.toggle('modal-open');
     hdr.modalHdr.classList.toggle('is-hidden');
   }
