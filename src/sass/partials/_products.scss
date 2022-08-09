@@ -1,7 +1,7 @@
 .products {
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #FFFFFF;
 }
 
@@ -342,6 +342,7 @@ height: 40px;
   border-radius: 50%;
   cursor: pointer;
   background-color: #FFFFFF;
+  transition: 250ms linear;
 }
 
 .products__svg {
@@ -361,6 +362,7 @@ height: 100%;
 border-radius: 24px;
 z-index: 3;
 box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+transition:  250ms linear;
 }
 .ice-cream-button{
   font-family: 'Titan One';
@@ -413,6 +415,7 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   border-radius: 24px;
   z-index: 3;
 box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+transition: 250ms linear;
 
 }
 .ice-coffee-modal{
@@ -450,6 +453,7 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   border-radius: 24px;
   z-index: 3;
 box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+transition: 250ms linear;
 
 }
 .milkshakes-modal{
