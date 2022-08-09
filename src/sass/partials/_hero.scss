@@ -413,17 +413,20 @@
     background-image: url(../images/header-hero_png/tasty1x_1200.png);
     background-size: 304px 241px;
     background-repeat: no-repeat;
-    background-color: #fff;
 
     @include bg-adapt {
       background-image: url(../images/header-hero_png/tasty2x_1200.png);
     }
   }
 }
+.products__svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .hero__button {
   border: transparent;
   border-radius: 50%;
   position: absolute;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover .products__svg,
   &:focus .products__svg {
