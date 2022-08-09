@@ -11,7 +11,7 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    // document.body.classList.toggle('modal-open');
+    document.body.classList.toggle('modal-open');
     refs.modal.classList.toggle('is-hidden--add');
   }
 
@@ -20,6 +20,7 @@
   const menuCloseBtn = document.querySelector('[data-menu-close]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
   const mobileClose = document.querySelector('[data-mobile-close]');
+  const heroHidden = document.querySelector('#home');
 
   menuOpenBtn.addEventListener('click', toggleMenu);
   menuCloseBtn.addEventListener('click', toggleMenu);
@@ -27,6 +28,8 @@
 
   function toggleMenu() {
     mobileMenu.classList.toggle('menu-active');
+    heroHidden.classList.toggle('hide-menu');
+    heroHidden.classList.toggle('open-menu');
   }
   function closeMenu() {
     mobileMenu.classList.remove('menu-active');

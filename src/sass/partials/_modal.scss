@@ -8,7 +8,6 @@
   height: 100%;
 
   background-color: #00000033;
-  //   overflow-y: scroll;
 
   transition: opacity 250ms linear;
 
@@ -27,12 +26,14 @@
   border: none;
 
   @include phone {
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     padding: 0 20px 20px 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 450px;
-    height: 100%;
+
+    width: 300px;
   }
 
   @include tablet {
@@ -41,8 +42,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    padding: 32px;
-    width: 450px;
+    padding: 0 32px 32px 32px;
+    width: 500px;
   }
 
   @include desktop {
@@ -51,8 +52,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 528px;
-    padding: 40px;
+    width: 450px;
+    padding: 0 24px 24px 24px;
   }
 }
 
@@ -88,14 +89,12 @@
 
 .hdr__img {
   margin: 0 auto;
-  width: calc(100% / 2);
-
-  //   @include toDesktop {
-  //     max-width: 450px;
-  //   }
+  width: 220px;
+  height: 220px;
 }
 
 .hdr__title {
+  margin-top: -15px;
   font-family: $font-main;
   text-transform: uppercase;
   text-align: center;
@@ -103,12 +102,15 @@
   color: getColor('main-clr');
 
   @include phone {
-    @include font-size(26px, 400, calc(30 / 26), 0.04em);
+    @include font-size(24px, 400, calc(30 / 24), 0.04em);
   }
-}
+  @include tablet {
+    @include font-size(34px, 400, calc(38 / 34), 0.04em);
+  }
 
-.hdr__container {
-  margin-top: 20px;
+  @include desktop {
+    @include font-size(38px, 400, calc(44 / 38), 0.04em);
+  }
 }
 
 .hdr__form {
@@ -116,7 +118,17 @@
 
   display: block;
 
-  margin-top: 30px;
+  @include phone {
+    margin-top: 25px;
+  }
+
+  @include tablet {
+    margin-top: 25px;
+  }
+
+  @include desktop {
+    margin-top: 30px;
+  }
 }
 
 .form__name {
@@ -124,7 +136,17 @@
   top: 5px;
   left: 5px;
 
-  @include font-size(14px, 500, cacl(19 / 14));
+  @include phone {
+    @include font-size(14px, 500, cacl(19 / 14));
+  }
+
+  @include tablet {
+    @include font-size(16px, 500, cacl(25 / 16));
+  }
+
+  @include desktop {
+    @include font-size(18px, 500, cacl(29 / 16));
+  }
 
   transition: all 250ms linear;
 }
@@ -133,7 +155,17 @@
   width: 100%;
   padding: 5px;
 
-  @include font-size(14px, 500, cacl(19 / 14));
+  @include phone {
+    @include font-size(14px, 500, cacl(19 / 14));
+  }
+
+  @include tablet {
+    @include font-size(16px, 500, cacl(25 / 16));
+  }
+
+  @include desktop {
+    @include font-size(18px, 500, cacl(29 / 16));
+  }
   color: getColor('font-clr1');
 
   border: none;
@@ -155,17 +187,29 @@
   &:focus + .form__name {
     color: getColor('font-clr1');
     top: -20px;
+    @include desktop {
+      top: -25px;
+    }
   }
 
   &:not(:placeholder-shown) + .form__name {
     top: -20px;
+    @include desktop {
+      top: -25px;
+    }
   }
 }
 
 .hdr__submit {
   @include button-red(28px);
 
-  margin-top: 15px;
+  padding: 8px 28px;
+
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+
+  // @include tablet {
+  //   margin-top: 15px;
+  // }
 }
