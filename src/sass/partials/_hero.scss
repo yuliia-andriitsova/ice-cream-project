@@ -2,7 +2,7 @@
   position: relative;
   background-color: getColor('bg-clr2');
   z-index: 1;
-  overflow: hidden;
+  overflow-x: hidden;
 
   // @include phone {
   //   padding-top: 8px;
@@ -444,4 +444,8 @@
     left: 229px;
     top: 554px;
   }
+}
+
+.hide-menu {
+  overflow: hidden;
 }
