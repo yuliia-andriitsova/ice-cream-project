@@ -2,6 +2,7 @@
   position: relative;
   background-color: getColor('bg-clr2');
   z-index: 1;
+  overflow: hidden;
 
   // @include phone {
   //   padding-top: 8px;
@@ -64,7 +65,7 @@
   }
   @include tablet {
     margin-top: 10px;
-    position: relative;
+    // position: relative;
   }
   @include desktop {
     margin-top: $dist60;
@@ -312,15 +313,14 @@
 //hero bottom part
 
 .hero__text {
+  display: none;
   font-family: 'DM Sans';
   font-weight: 400;
   color: #ffffff;
   position: absolute;
 
-  @include phone {
-    display: none;
-  }
   @include tablet {
+    display: block;
     width: 114px;
     height: 48px;
     font-size: 8px;
@@ -330,6 +330,7 @@
     top: 287px;
   }
   @include desktop {
+    display: block;
     width: 200px;
     height: 78px;
     font-size: 14px;
@@ -339,21 +340,19 @@
     top: 456px;
   }
 }
-.hero__container::before {
-  content: '';
-  position: absolute;
-
-  @include phone {
-    display: none;
-  }
+.hero::before {
+  animation: icecream 500ms ease-out;
   @include tablet {
+    content: '';
+    position: absolute;
+
     background-image: url(../images/header-hero_png/milk1x_768.png);
     background-repeat: no-repeat;
     background-size: 152px 154px;
     width: 152px;
     height: 154px;
-    left: 0;
-    top: 115%;
+    left: $dist32;
+    bottom: $dist16;
 
     @include bg-adapt {
       background-image: url(../images/header-hero_png/milk2x-1_768.png);
@@ -361,13 +360,16 @@
   }
 
   @include desktop {
+    content: '';
+    position: absolute;
+
     background-image: url(../images/header-hero_png/milk1x_1200.png);
     background-size: 213px 216px;
     background-repeat: no-repeat;
     width: 213px;
     height: 216px;
-    left: 15px;
-    top: 56%;
+    left: $dist16;
+    bottom: $dist60;
 
     @include bg-adapt {
       background-image: url(../images/header-hero_png/milk2x_1200.png);
@@ -375,34 +377,37 @@
   }
 }
 
-.hero__container::after {
-  content: '';
-  position: absolute;
+.hero::after {
+  animation: circle 500ms linear;
+  animation-direction: reverse;
 
-  @include phone {
-    display: none;
-  }
   @include tablet {
+    content: '';
+    position: absolute;
+
     background-image: url(../images/header-hero_png/tasty1x_768.png);
     background-size: 190px 150px;
     background-repeat: no-repeat;
     width: 190px;
     height: 150px;
-    right: -2%;
-    top: 132%;
+    right: $dist16;
+    bottom: 0;
     @include bg-adapt {
       background-image: url(../images/header-hero_png/tasty2x_768.png);
     }
   }
 
   @include desktop {
+    content: '';
+    position: absolute;
+
     background-image: url(../images/header-hero_png/tasty1x_1200.png);
     background-size: 304px 241px;
     background-repeat: no-repeat;
     width: 304px;
     height: 241px;
-    right: 0%;
-    top: 65%;
+    right: $dist32;
+    bottom: 0;
     @include bg-adapt {
       background-image: url(../images/header-hero_png/tasty2x_1200.png);
     }

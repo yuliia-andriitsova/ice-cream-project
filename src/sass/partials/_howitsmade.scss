@@ -289,11 +289,11 @@
   z-index: 2;
 }
 
-
-.is-hidden.is-hidden--add {
+.is-hidden--add {
+  pointer-events: none;
+  opacity: 0;
   display: none;
 }
-
 
 .howitsmade-modal {
   position: absolute;
