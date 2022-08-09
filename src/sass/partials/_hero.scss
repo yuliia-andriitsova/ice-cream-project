@@ -148,11 +148,11 @@
     padding-top: 2px;
     padding-right: 10px;
 
-    background-image: url(/src/images/header-hero_png/circle/circle_s_768_1x.png);
+    background-image: url(/src/images/header-hero_png/circle/circle_s_768_1x.webp);
     background-size: 16px 16px;
 
     @include bg-adapt {
-      background-image: url(/src/images/header-hero_png/circle/circle_s_768_2x.png);
+      background-image: url(/src/images/header-hero_png/circle/circle_s_768_2x.webp);
     }
   }
 
@@ -160,11 +160,11 @@
     padding-top: 4px;
     padding-right: 20px;
 
-    background-image: url(/src/images/header-hero_png/circle/circle_s_1280_1x.png);
+    background-image: url(/src/images/header-hero_png/circle/circle_s_1280_1x.webp);
     background-size: 30px 30px;
 
     @include bg-adapt {
-      background-image: url(/src/images/header-hero_png/circle/circle_s_1280_2x.png);
+      background-image: url(/src/images/header-hero_png/circle/circle_s_1280_2x.webp);
     }
   }
 }
